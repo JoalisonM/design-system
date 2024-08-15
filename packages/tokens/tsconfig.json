@@ -1,0 +1,6 @@
+{
+  "extends": "@atumalaca-ui/ts-config/base.json",
+  "include": [
+    "src"
+  ]
+}
