@@ -11,7 +11,7 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   asChild?: boolean
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     { variant = 'default', size = 'default', asChild = false, ...props },
     ref,
@@ -27,5 +27,3 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 )
 
 Button.displayName = 'Button'
-
-export { Button }

@@ -25,8 +25,8 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   }
 
   &:disabled {
-    pointer-events: none;
     opacity: 0.5;
+    cursor: not-allowed;
   }
 
   ${(props) =>
@@ -35,7 +35,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
       background-color: ${(props) => props.theme.colors.amber500};
       color: ${(props) => props.theme.colors.zinc100};
 
-      &:hover {
+      &:not(:disabled):hover {
         background-color: ${(props) => props.theme.colors.amber600};
       }
     `}
@@ -46,7 +46,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
       background-color: ${(props) => props.theme.colors.error800};
       color: ${(props) => props.theme.colors.zinc100};
 
-      &:hover {
+      &:not(:disabled):hover {
         background-color: ${(props) => props.theme.colors.error900};
       }
     `}
@@ -57,7 +57,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
       background-color: ${(props) => props.theme.colors.emerald500};
       color: ${(props) => props.theme.colors.zinc100};
 
-      &:hover {
+      &:not(:disabled):hover {
         background-color: ${(props) => props.theme.colors.emerald600};
       }
     `}
@@ -75,7 +75,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
       text-underline-offset: 4px;
       color: ${(props) => props.theme.colors.amber500};
 
-      &:hover {
+      &:not(:disabled):hover {
         text-decoration: underline;
       }
     `}
@@ -84,7 +84,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     props.variant === 'ghost' &&
     css`
       color: ${(props) => props.theme.colors.zinc900};
-      &:hover {
+      &:not(:disabled):hover {
         background-color: ${(props) => props.theme.colors.zinc100};
       }
     `}

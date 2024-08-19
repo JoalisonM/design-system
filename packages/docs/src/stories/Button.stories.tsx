@@ -1,21 +1,56 @@
 import { StoryObj, Meta } from '@storybook/react'
-import { Button, ButtonProps } from '@atumalaca-ui/react'
+import { Box, Button, ButtonProps } from '@atumalaca-ui/react'
 
 export default {
-  title: 'Button',
+  title: 'Form/Button',
   component: Button,
+  args: {
+    children: 'Enviar',
+    variant: 'default',
+    size: 'default',
+    disabled: false,
+  },
+  argTypes: {
+    variant: {
+      type: 'string',
+      description: 'default | destructive | success | outline | ghost | link',
+      options: ['default', 'destructive', 'success', 'outline', 'ghost', 'link'],
+      control: { type: 'select' },
+    },
+    size: {
+      type: 'string',
+      description: 'default | sm | lg | icon',
+      options: ['default', 'sm', 'lg', 'icon'],
+      control: { type: 'select' },
+    },
+    onClick: {
+      action: 'click',
+    },
+    disabled: {
+      control: {
+        type: 'boolean',
+      }
+    }
+  },
+  decorators: [
+    (Story) => {
+      return (
+        <Box>
+          {Story()}
+        </Box>
+      )
+    }
+  ]
 } as Meta<ButtonProps>
 
 export const Default: StoryObj<ButtonProps> = {
   args: {
-    children: 'Default',
     size: 'default',
   }
 }
 
 export const Success: StoryObj<ButtonProps> = {
   args: {
-    children: 'Success',
     variant: 'success',
     size: 'lg',
   }
@@ -23,7 +58,6 @@ export const Success: StoryObj<ButtonProps> = {
 
 export const Destructive: StoryObj<ButtonProps> = {
   args: {
-    children: 'Destructive',
     variant: 'destructive',
     size: 'sm'
   }
@@ -31,7 +65,6 @@ export const Destructive: StoryObj<ButtonProps> = {
 
 export const Ghost: StoryObj<ButtonProps> = {
   args: {
-    children: 'Ghost',
     variant: 'ghost',
     size: 'default'
   }
@@ -39,17 +72,23 @@ export const Ghost: StoryObj<ButtonProps> = {
 
 export const Link: StoryObj<ButtonProps> = {
   args: {
-    children: 'Link',
     variant: 'link',
     size: 'default'
   }
 }
 
-export const outline: StoryObj<ButtonProps> = {
+export const Outline: StoryObj<ButtonProps> = {
   args: {
-    children: 'Outline',
     variant: 'outline',
     size: 'default'
+  }
+}
+
+export const Disabled: StoryObj<ButtonProps> = {
+  args: {
+    variant: 'success',
+    size: 'default',
+    disabled: true,
   }
 }
 

@@ -1,4 +1,5 @@
 {
+  "name": "@atumalaca-ui/root",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -9,5 +10,6 @@
   },
   "devDependencies": {
     "turbo": "^2.0.14"
-  }
+  },
+  "packageManager": "npm@10.2.4"
 }
