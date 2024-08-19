@@ -1,5 +1,5 @@
 import { StoryObj, Meta } from '@storybook/react'
-import { Avatar, AvatarProps } from '@atumalaca-ui/react'
+import { Avatar, AvatarProps } from '@nefex-ui/react'
 
 export default {
   title: 'Data Display/Avatar',

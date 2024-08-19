@@ -1,5 +1,5 @@
 import { StoryObj, Meta } from '@storybook/react'
-import { Box, Heading, HeadingProps } from '@atumalaca-ui/react'
+import { Box, Heading, HeadingProps } from '@nefex-ui/react'
 
 export default {
   title: 'Typography/Heading',

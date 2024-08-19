@@ -1,5 +1,5 @@
 {
-  "name": "@atumalaca-ui/root",
+  "name": "@nefex-ui/root",
   "private": true,
   "workspaces": [
     "packages/*"

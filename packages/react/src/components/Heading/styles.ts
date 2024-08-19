@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { fontSizes } from '@atumalaca-ui/tokens'
+import { fontSizes } from '@nefex-ui/tokens'
 
 type HeadingContainerProps = {
   size: keyof typeof fontSizes

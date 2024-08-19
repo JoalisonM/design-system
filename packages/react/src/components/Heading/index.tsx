@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'styled-components'
-import { fontSizes } from '@atumalaca-ui/tokens'
+import { fontSizes } from '@nefex-ui/tokens'
 import { ElementType, forwardRef, HTMLAttributes } from 'react'
 
 import { HeadingContainer } from './styles'

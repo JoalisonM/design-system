@@ -1,5 +1,5 @@
 import { StoryObj, Meta } from '@storybook/react'
-import { Box, Text, TextProps } from '@atumalaca-ui/react'
+import { Box, Text, TextProps } from '@nefex-ui/react'
 
 export default {
   title: 'Typography/Text',

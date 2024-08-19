@@ -1,5 +1,5 @@
 {
-  "name": "@atumalaca-ui/eslint-config",
+  "name": "@nefex-ui/eslint-config",
   "license": "MIT",
   "private": true,
   "main": "index.js",

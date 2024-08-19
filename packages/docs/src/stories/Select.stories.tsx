@@ -1,5 +1,5 @@
 import { StoryObj, Meta } from '@storybook/react'
-import { Box, Select, Option, SelectProps } from '@atumalaca-ui/react'
+import { Box, Select, Option, SelectProps } from '@nefex-ui/react'
 
 export default {
   title: 'Form/Select',

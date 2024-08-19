@@ -1,5 +1,5 @@
 import { StoryObj, Meta } from '@storybook/react'
-import { Box, MultiStep, MultiStepProps } from '@atumalaca-ui/react'
+import { Box, MultiStep, MultiStepProps } from '@nefex-ui/react'
 
 export default {
   title: 'Form/Multi Step',

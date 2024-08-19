@@ -1,4 +1,4 @@
-import { colors } from '@atumalaca-ui/tokens'
+import { colors } from '@nefex-ui/tokens'
 import { getContrast } from 'polished'
 
 export function ColorsGrid() {

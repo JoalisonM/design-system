@@ -1,6 +1,6 @@
 import { ElementType, forwardRef, HTMLAttributes } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { fontSizes } from '@atumalaca-ui/tokens'
+import { fontSizes } from '@nefex-ui/tokens'
 
 import { defaultTheme } from '../../styles/themes/default'
 import { TextContainer } from './styles'

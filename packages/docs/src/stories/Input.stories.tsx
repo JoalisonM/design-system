@@ -1,5 +1,5 @@
 import { StoryObj, Meta } from '@storybook/react'
-import { Box, Input, InputProps, Text } from '@atumalaca-ui/react'
+import { Box, Input, InputProps, Text } from '@nefex-ui/react'
 
 export default {
   title: 'Form/Input',

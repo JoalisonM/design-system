@@ -1,5 +1,5 @@
 import { StoryObj, Meta } from '@storybook/react'
-import { Box, Checkbox, CheckboxProps, Text } from '@atumalaca-ui/react'
+import { Box, Checkbox, CheckboxProps, Text } from '@nefex-ui/react'
 
 export default {
   title: 'Form/Checkbox',

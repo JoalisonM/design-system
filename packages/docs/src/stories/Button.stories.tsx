@@ -1,5 +1,5 @@
 import { StoryObj, Meta } from '@storybook/react'
-import { Box, Button, ButtonProps } from '@atumalaca-ui/react'
+import { Box, Button, ButtonProps } from '@nefex-ui/react'
 
 export default {
   title: 'Form/Button',

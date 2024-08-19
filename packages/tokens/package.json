@@ -1,5 +1,5 @@
 {
-  "name": "@atumalaca-ui/tokens",
+  "name": "@nefex-ui/tokens",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
@@ -14,8 +14,8 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@atumalaca-ui/ts-config": "*",
-    "@atumalaca-ui/eslint-config": "*",
+    "@nefex-ui/ts-config": "*",
+    "@nefex-ui/eslint-config": "*",
     "tsup": "^8.2.4",
     "typescript": "^5.5.4"
   }

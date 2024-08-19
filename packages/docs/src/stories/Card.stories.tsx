@@ -1,6 +1,6 @@
 import { StoryObj, Meta } from '@storybook/react'
-import type { ButtonProps } from '@atumalaca-ui/react'
-import { Box, Button, Card, Heading, Input, Select, Option, Text } from '@atumalaca-ui/react'
+import type { ButtonProps } from '@nefex-ui/react'
+import { Box, Button, Card, Heading, Input, Select, Option, Text } from '@nefex-ui/react'
 
 export default {
   title: 'Surfaces/Card',

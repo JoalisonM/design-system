@@ -6,7 +6,7 @@ import {
   fontSizes,
   fontWeights,
   lineHeights,
-} from '@atumalaca-ui/tokens'
+} from '@nefex-ui/tokens'
 
 export const defaultTheme = {
   fonts,
