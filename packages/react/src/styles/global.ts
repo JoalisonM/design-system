@@ -14,6 +14,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body, input, textarea, button {
-    font: 400 1rem 'Nunito', sans-serif;
+    font: 400 1rem 'Poppins', sans-serif;
   }
 `
