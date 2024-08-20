@@ -19,6 +19,9 @@ const config: StorybookConfig = {
     getAbsolutePath("@storybook/addon-interactions"),
     getAbsolutePath("@storybook/addon-a11y"),
   ],
+  core: {
+    builder: '@storybook/builder-vite',
+  },
   framework: {
     name: getAbsolutePath("@storybook/react-vite"),
     options: {},
@@ -26,10 +29,10 @@ const config: StorybookConfig = {
   docs: {
     autodocs: true,
   },
-  viteFinal: async (config, { configType }) => {
+  async viteFinal(config, options) {
     const { mergeConfig } = await import('vite')
 
-    if (configType === 'PRODUCTION') {
+    if (options.configType === 'PRODUCTION') {
       config.base = '/design-system'
     }
 
