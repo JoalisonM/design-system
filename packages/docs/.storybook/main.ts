@@ -33,7 +33,7 @@ const config: StorybookConfig = {
     const { mergeConfig } = await import('vite')
 
     if (options.configType === 'PRODUCTION') {
-      config.base = '/design-system'
+      config.base = '/design-system/'
     }
 
     return mergeConfig(config, {})
