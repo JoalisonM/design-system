@@ -14,8 +14,8 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@nefex-ui/tokens": "*",
     "@nefex-ui/eslint-config": "*",
+    "@nefex-ui/tokens": "*",
     "@nefex-ui/ts-config": "*",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
@@ -28,6 +28,7 @@
     "@radix-ui/react-checkbox": "^1.1.1",
     "@radix-ui/react-select": "^2.1.1",
     "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-switch": "^1.1.0",
     "lucide-react": "^0.428.0",
     "styled-components": "^6.1.12"
   }
