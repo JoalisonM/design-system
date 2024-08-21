@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
     "allowJs": true,
     "composite": false,
     "declaration": true,
@@ -20,6 +19,5 @@
     "allowSyntheticDefaultImports": true,
     "strict": true
   },
-  "include": ["src/**/*", "node_modules/@types"],
-  "exclude": ["node_modules", "dist", "*.d.ts", "src/**/*.test*"]
+  "exclude": ["node_modules", "dist", "src/**/*.test*"]
 }
