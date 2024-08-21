@@ -1,101 +1,105 @@
-import { Check, ChevronDown } from 'lucide-react';
-import * as SelectPrimitive from '@radix-ui/react-select';
-import { ComponentProps, ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
-import { ThemeProvider } from 'styled-components';
+import { Check, ChevronDown } from "lucide-react";
+import * as SelectPrimitive from "@radix-ui/react-select";
+import type {
+  ComponentProps,
+  ComponentPropsWithoutRef,
+  ElementRef,
+} from "react";
+import { forwardRef } from "react";
+import { ThemeProvider } from "styled-components";
 
-import { defaultTheme } from '../../styles/themes/default';
 import {
   SelectItemContainer,
   SelectContentContainer,
   SelectTriggerContainer,
   SelectViewportContainer,
-} from './styles';
+} from "./styles";
 
-type SelectTriggerRef = ElementRef<typeof SelectPrimitive.Trigger>
-type SelectTriggerProps = ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>
+import { defaultTheme } from "../../styles/themes/default";
 
-const SelectTrigger = forwardRef<SelectTriggerRef, SelectTriggerProps>((
-  { children, ...props }, ref
-) => {
-  return (
-    <SelectTriggerContainer ref={ref} {...props}>
-      {children}
+type SelectTriggerRef = ElementRef<typeof SelectPrimitive.Trigger>;
+type SelectTriggerProps = ComponentPropsWithoutRef<
+  typeof SelectPrimitive.Trigger
+>;
 
-      <SelectPrimitive.Icon asChild>
-        <ChevronDown size={16} />
-      </SelectPrimitive.Icon>
-    </SelectTriggerContainer>
-  )
-})
+const SelectTrigger = forwardRef<SelectTriggerRef, SelectTriggerProps>(
+  ({ children, ...props }, ref) => {
+    return (
+      <SelectTriggerContainer ref={ref} {...props}>
+        {children}
 
-SelectTrigger.displayName = 'SelectTrigger'
+        <SelectPrimitive.Icon asChild>
+          <ChevronDown size={16} />
+        </SelectPrimitive.Icon>
+      </SelectTriggerContainer>
+    );
+  }
+);
 
-type SelectContentRef = ElementRef<typeof SelectPrimitive.Content>
-type SelectContentProps = ComponentPropsWithoutRef<typeof SelectPrimitive.Content>
+SelectTrigger.displayName = "SelectTrigger";
 
-const SelectContent = forwardRef<SelectContentRef, SelectContentProps>((
-  { children, position = "popper", ...props }, ref
-) => {
-  return (
-    <SelectPrimitive.Portal>
-      <SelectContentContainer ref={ref} position={position} {...props}>
-        <SelectViewportContainer position={position}>
-          {children}
-        </SelectViewportContainer>
-      </SelectContentContainer>
-    </SelectPrimitive.Portal>
-  )
-})
+type SelectContentRef = ElementRef<typeof SelectPrimitive.Content>;
+type SelectContentProps = ComponentPropsWithoutRef<
+  typeof SelectPrimitive.Content
+>;
 
-SelectContent.displayName = 'SelectContent'
+const SelectContent = forwardRef<SelectContentRef, SelectContentProps>(
+  ({ children, position = "popper", ...props }, ref) => {
+    return (
+      <SelectPrimitive.Portal>
+        <SelectContentContainer ref={ref} position={position} {...props}>
+          <SelectViewportContainer position={position}>
+            {children}
+          </SelectViewportContainer>
+        </SelectContentContainer>
+      </SelectPrimitive.Portal>
+    );
+  }
+);
 
-type OptionRef = ElementRef<typeof SelectPrimitive.Item>
-type OptionProps = ComponentPropsWithoutRef<typeof SelectPrimitive.Item>
+SelectContent.displayName = "SelectContent";
 
-export const Option = forwardRef<OptionRef, OptionProps>((
-  { children, ...props }, ref
-) => {
-  return (
-    <ThemeProvider theme={defaultTheme}>
-      <SelectItemContainer ref={ref} {...props}>
-        <SelectPrimitive.ItemIndicator>
-          <Check strokeWidth={3} className="h-4 w-4 text-blueLagoon" />
-        </SelectPrimitive.ItemIndicator>
+type OptionRef = ElementRef<typeof SelectPrimitive.Item>;
+type OptionProps = ComponentPropsWithoutRef<typeof SelectPrimitive.Item>;
 
-        <SelectPrimitive.ItemText className="text-black">
-          {children}
-        </SelectPrimitive.ItemText>
-      </SelectItemContainer>
-    </ThemeProvider>
-  )
-})
+export const Option = forwardRef<OptionRef, OptionProps>(
+  ({ children, ...props }, ref) => {
+    return (
+      <ThemeProvider theme={defaultTheme}>
+        <SelectItemContainer ref={ref} {...props}>
+          <SelectPrimitive.ItemIndicator>
+            <Check strokeWidth={3} className="h-4 w-4 text-blueLagoon" />
+          </SelectPrimitive.ItemIndicator>
 
-Option.displayName = 'Option'
+          <SelectPrimitive.ItemText className="text-black">
+            {children}
+          </SelectPrimitive.ItemText>
+        </SelectItemContainer>
+      </ThemeProvider>
+    );
+  }
+);
+
+Option.displayName = "Option";
 
 export type SelectProps = ComponentProps<typeof SelectPrimitive.Trigger> & {
-  placeholder?: string
-}
+  placeholder?: string;
+};
 
-export const Select = forwardRef<HTMLButtonElement, SelectProps>((
-  {
-    children,
-    placeholder,
-    ...props
-  }, ref
-) => {
-  return (
-    <ThemeProvider theme={defaultTheme}>
-      <SelectPrimitive.Root>
-        <SelectTrigger ref={ref} {...props}>
-          <SelectPrimitive.Value placeholder={placeholder} />
-        </SelectTrigger>
+export const Select = forwardRef<HTMLButtonElement, SelectProps>(
+  ({ children, placeholder, ...props }, ref) => {
+    return (
+      <ThemeProvider theme={defaultTheme}>
+        <SelectPrimitive.Root>
+          <SelectTrigger ref={ref} {...props}>
+            <SelectPrimitive.Value placeholder={placeholder} />
+          </SelectTrigger>
 
-        <SelectContent sideOffset={3}>
-          {children}
-        </SelectContent>
-      </SelectPrimitive.Root>
-    </ThemeProvider>
-  )
-})
+          <SelectContent sideOffset={3}>{children}</SelectContent>
+        </SelectPrimitive.Root>
+      </ThemeProvider>
+    );
+  }
+);
 
-Select.displayName = 'Select'
+Select.displayName = "Select";

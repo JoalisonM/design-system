@@ -1,25 +1,28 @@
-import { ThemeProvider } from 'styled-components'
-import { defaultTheme } from '../../styles/themes/default'
-import { AvatarContainer, AvatarFallback, AvatarImage } from './styles';
-import { User } from 'lucide-react';
-import { forwardRef, HTMLAttributes } from 'react';
+import type { HTMLAttributes } from "react";
+import { forwardRef } from "react";
+import { User } from "lucide-react";
+import { ThemeProvider } from "styled-components";
 
-export type AvatarProps = HTMLAttributes<HTMLImageElement>
+import { AvatarContainer, AvatarFallback, AvatarImage } from "./styles";
 
-export const Avatar = forwardRef<HTMLImageElement, AvatarProps>((
-  { ...props }, ref
-) => {
-  return (
-    <ThemeProvider theme={defaultTheme}>
-      <AvatarContainer>
-        <AvatarImage ref={ref} {...props} />
+import { defaultTheme } from "../../styles/themes/default";
 
-        <AvatarFallback delayMs={600}>
-          <User />
-        </AvatarFallback>
-      </AvatarContainer>
-    </ThemeProvider>
-  )
-});
+export type AvatarProps = HTMLAttributes<HTMLImageElement>;
 
-Avatar.displayName = 'Avatar';
+export const Avatar = forwardRef<HTMLImageElement, AvatarProps>(
+  ({ ...props }, ref) => {
+    return (
+      <ThemeProvider theme={defaultTheme}>
+        <AvatarContainer>
+          <AvatarImage ref={ref} {...props} />
+
+          <AvatarFallback delayMs={600}>
+            <User />
+          </AvatarFallback>
+        </AvatarContainer>
+      </ThemeProvider>
+    );
+  }
+);
+
+Avatar.displayName = "Avatar";

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const TextAreaContainer = styled.textarea`
   display: flex;
@@ -33,4 +33,4 @@ export const TextAreaContainer = styled.textarea`
     color: ${(props) => props.theme.colors.zinc600};
     font-size: ${(props) => props.theme.fontSizes.xs};
   }
-`
+`;

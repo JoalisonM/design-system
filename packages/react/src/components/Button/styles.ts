@@ -1,9 +1,9 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components";
 
 type ButtonContainerProps = {
-  size: 'default' | 'sm' | 'lg' | 'icon'
-  variant: 'default' | 'destructive' | 'success' | 'outline' | 'ghost' | 'link'
-}
+  size: "default" | "sm" | "lg" | "icon";
+  variant: "default" | "destructive" | "success" | "outline" | "ghost" | "link";
+};
 
 export const ButtonContainer = styled.button<ButtonContainerProps>`
   display: inline-flex;
@@ -30,7 +30,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   }
 
   ${(props) =>
-    props.variant === 'default' &&
+    props.variant === "default" &&
     css`
       background-color: ${(props) => props.theme.colors.amber500};
       color: ${(props) => props.theme.colors.zinc100};
@@ -41,7 +41,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     `}
 
   ${(props) =>
-    props.variant === 'destructive' &&
+    props.variant === "destructive" &&
     css`
       background-color: ${(props) => props.theme.colors.error800};
       color: ${(props) => props.theme.colors.zinc100};
@@ -52,7 +52,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     `}
 
   ${(props) =>
-    props.variant === 'success' &&
+    props.variant === "success" &&
     css`
       background-color: ${(props) => props.theme.colors.emerald500};
       color: ${(props) => props.theme.colors.zinc100};
@@ -63,14 +63,14 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     `}
 
   ${(props) =>
-    props.variant === 'outline' &&
+    props.variant === "outline" &&
     css`
       border: 2px solid ${(props) => props.theme.colors.amber500};
       color: ${(props) => props.theme.colors.amber500};
     `}
 
   ${(props) =>
-    props.variant === 'link' &&
+    props.variant === "link" &&
     css`
       text-underline-offset: 4px;
       color: ${(props) => props.theme.colors.amber500};
@@ -81,7 +81,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     `}
 
     ${(props) =>
-    props.variant === 'ghost' &&
+    props.variant === "ghost" &&
     css`
       color: ${(props) => props.theme.colors.zinc900};
       &:not(:disabled):hover {
@@ -90,7 +90,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     `}
 
   ${(props) =>
-    props.size === 'default' &&
+    props.size === "default" &&
     css`
       height: ${(props) => props.theme.space[10]};
       padding: ${(props) => props.theme.space[2]}
@@ -98,7 +98,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     `}
 
   ${(props) =>
-    props.size === 'sm' &&
+    props.size === "sm" &&
     css`
       height: ${(props) => props.theme.space[8]};
       border-radius: ${(props) => props.theme.radii.md};
@@ -106,7 +106,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     `}
 
   ${(props) =>
-    props.size === 'lg' &&
+    props.size === "lg" &&
     css`
       height: ${(props) => props.theme.space[12]};
       border-radius: ${(props) => props.theme.radii.md};
@@ -114,9 +114,9 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     `}
 
   ${(props) =>
-    props.size === 'icon' &&
+    props.size === "icon" &&
     css`
       width: ${(props) => props.theme.space[10]};
       height: ${(props) => props.theme.space[10]};
     `}
-`
+`;

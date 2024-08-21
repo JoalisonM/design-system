@@ -6,7 +6,7 @@ import {
   fontSizes,
   fontWeights,
   lineHeights,
-} from '@nefex-ui/tokens'
+} from "@nefex-ui/tokens";
 
 export const defaultTheme = {
   fonts,
@@ -16,4 +16,4 @@ export const defaultTheme = {
   space,
   radii,
   lineHeights,
-}
+};

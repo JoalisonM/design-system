@@ -1,27 +1,35 @@
-import { ComponentProps, ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react';
-import { ThemeProvider } from 'styled-components';
-import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
-import { Check } from 'lucide-react';
+import type {
+  ComponentProps,
+  ElementRef,
+  ComponentPropsWithoutRef,
+} from "react";
+import { forwardRef } from "react";
+import { Check } from "lucide-react";
+import { ThemeProvider } from "styled-components";
+import type * as CheckboxPrimitive from "@radix-ui/react-checkbox";
 
-import { CheckboxRoot, CheckboxIndicator } from './styles';
-import { defaultTheme } from '../../styles/themes/default';
+import { CheckboxRoot, CheckboxIndicator } from "./styles";
 
-export type CheckboxProps = ComponentProps<typeof CheckboxPrimitive.Root>
-type CheckboxRef = ElementRef<typeof CheckboxPrimitive.Root>
-type CheckboxWithoutRef = ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
+import { defaultTheme } from "../../styles/themes/default";
 
-export const Checkbox = forwardRef<CheckboxRef, CheckboxWithoutRef>((
-  { ...props }, ref
-) => {
-  return (
-    <ThemeProvider theme={defaultTheme}>
-      <CheckboxRoot ref={ref} {...props}>
-        <CheckboxIndicator asChild>
-          <Check strokeWidth={4} />
-        </CheckboxIndicator>
-      </CheckboxRoot>
-    </ThemeProvider>
-  )
-})
+export type CheckboxProps = ComponentProps<typeof CheckboxPrimitive.Root>;
+type CheckboxRef = ElementRef<typeof CheckboxPrimitive.Root>;
+type CheckboxWithoutRef = ComponentPropsWithoutRef<
+  typeof CheckboxPrimitive.Root
+>;
 
-Checkbox.displayName = 'Checkbox'
+export const Checkbox = forwardRef<CheckboxRef, CheckboxWithoutRef>(
+  ({ ...props }, ref) => {
+    return (
+      <ThemeProvider theme={defaultTheme}>
+        <CheckboxRoot ref={ref} {...props}>
+          <CheckboxIndicator asChild>
+            <Check strokeWidth={4} />
+          </CheckboxIndicator>
+        </CheckboxRoot>
+      </ThemeProvider>
+    );
+  }
+);
+
+Checkbox.displayName = "Checkbox";

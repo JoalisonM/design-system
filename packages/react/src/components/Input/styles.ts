@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const InputContainer = styled.div`
   display: flex;
@@ -20,21 +20,21 @@ export const InputContainer = styled.div`
     background-color: ${(props) => props.theme.colors.zinc200};
     border-color: ${(props) => props.theme.colors.zinc400};
   }
-`
+`;
 
 export const Prefix = styled.span`
   font-family: ${(props) => props.theme.fonts.default};
   font-size: ${(props) => props.theme.fontSizes.sm};
   color: ${(props) => props.theme.colors.zinc500};
   font-weight: ${(props) => props.theme.fontWeights.medium};
-`
+`;
 
 export const Suffix = styled.span`
   font-family: ${(props) => props.theme.fonts.default};
   font-size: ${(props) => props.theme.fontSizes.sm};
   color: ${(props) => props.theme.colors.zinc500};
   font-weight: ${(props) => props.theme.fontWeights.medium};
-`
+`;
 
 export const Trigger = styled.input`
   font-family: ${(props) => props.theme.fonts.default};
@@ -58,4 +58,4 @@ export const Trigger = styled.input`
     color: ${(props) => props.theme.colors.zinc600};
     font-size: ${(props) => props.theme.fontSizes.xs};
   }
-`
+`;

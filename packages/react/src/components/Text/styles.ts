@@ -1,9 +1,9 @@
-import styled from 'styled-components'
-import { fontSizes } from '@nefex-ui/tokens'
+import styled from "styled-components";
+import type { fontSizes } from "@nefex-ui/tokens";
 
 type TextContainerProps = {
-  size: keyof typeof fontSizes
-}
+  size: keyof typeof fontSizes;
+};
 
 export const TextContainer = styled.p<TextContainerProps>`
   font-family: ${(props) => props.theme.fonts.default};
@@ -12,4 +12,4 @@ export const TextContainer = styled.p<TextContainerProps>`
   color: ${(props) => props.theme.colors.zinc900};
   font-size: ${(props) => props.theme.fontSizes[props.size]};
   -webkit-font-smoothing: antialiased;
-`
+`;

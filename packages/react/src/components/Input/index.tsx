@@ -1,26 +1,28 @@
-import { forwardRef, InputHTMLAttributes, ReactNode } from 'react'
-import { ThemeProvider } from 'styled-components'
+import type { InputHTMLAttributes, ReactNode } from "react";
+import { forwardRef } from "react";
+import { ThemeProvider } from "styled-components";
 
-import { defaultTheme } from '../../styles/themes/default'
-import { InputContainer, Prefix, Suffix, Trigger } from './styles'
+import { InputContainer, Prefix, Suffix, Trigger } from "./styles";
+
+import { defaultTheme } from "../../styles/themes/default";
 
 export type InputProps = InputHTMLAttributes<HTMLInputElement> & {
-  prefix?: ReactNode
-  suffix?: ReactNode
-}
+  prefix?: ReactNode;
+  suffix?: ReactNode;
+};
 
-export const Input = forwardRef<HTMLInputElement, InputProps>((
-  { prefix, suffix, ...props }, ref
-) => {
-  return (
-    <ThemeProvider theme={defaultTheme}>
-      <InputContainer>
-        {!!prefix && <Prefix>{prefix}</Prefix>}
-        <Trigger ref={ref} {...props} />
-        {!!suffix && <Suffix>{suffix}</Suffix>}
-      </InputContainer>
-    </ThemeProvider>
-  )
-})
+export const Input = forwardRef<HTMLInputElement, InputProps>(
+  ({ prefix, suffix, ...props }, ref) => {
+    return (
+      <ThemeProvider theme={defaultTheme}>
+        <InputContainer>
+          {!!prefix && <Prefix>{prefix}</Prefix>}
+          <Trigger ref={ref} {...props} />
+          {!!suffix && <Suffix>{suffix}</Suffix>}
+        </InputContainer>
+      </ThemeProvider>
+    );
+  }
+);
 
-Input.displayName = 'Input'
+Input.displayName = "Input";

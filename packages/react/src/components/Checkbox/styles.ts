@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import * as Checkbox from '@radix-ui/react-checkbox';
+import styled from "styled-components";
+import * as Checkbox from "@radix-ui/react-checkbox";
 
 export const CheckboxRoot = styled(Checkbox.Root)`
   all: unset;
@@ -26,10 +26,10 @@ export const CheckboxRoot = styled(Checkbox.Root)`
     outline: 0;
     box-shadow: 0 0 2px 1px ${(props) => props.theme.colors.amber500};
   }
-`
+`;
 
 export const CheckboxIndicator = styled(Checkbox.Indicator)`
   color: ${(props) => props.theme.colors.white};
   width: ${(props) => props.theme.space[4]};
   height: ${(props) => props.theme.space[4]};
-`
+`;

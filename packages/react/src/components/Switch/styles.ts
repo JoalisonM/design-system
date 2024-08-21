@@ -1,5 +1,5 @@
-import * as SwitchPrimitives from '@radix-ui/react-switch'
-import styled from 'styled-components'
+import * as SwitchPrimitives from "@radix-ui/react-switch";
+import styled from "styled-components";
 
 export const SwitchRoot = styled(SwitchPrimitives.Root)`
   all: unset;
@@ -27,7 +27,7 @@ export const SwitchRoot = styled(SwitchPrimitives.Root)`
   &[data-state="checked"] {
     background-color: ${(props) => props.theme.colors.amber500};
   }
-`
+`;
 
 export const SwitchThumb = styled(SwitchPrimitives.Thumb)`
   display: block;
@@ -43,4 +43,4 @@ export const SwitchThumb = styled(SwitchPrimitives.Thumb)`
   &[data-state="checked"] {
     transform: translateX(26px);
   }
-`
+`;

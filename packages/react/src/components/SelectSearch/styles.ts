@@ -1,5 +1,5 @@
-import * as SelectPrimitive from '@radix-ui/react-select';
-import styled, { css } from 'styled-components';
+import * as SelectPrimitive from "@radix-ui/react-select";
+import styled from "styled-components";
 
 export const SelectTriggerContainer = styled(SelectPrimitive.Trigger)`
   display: flex;
@@ -35,7 +35,7 @@ export const SelectTriggerContainer = styled(SelectPrimitive.Trigger)`
     color: ${(props) => props.theme.colors.zinc600};
     font-size: ${(props) => props.theme.fontSizes.xs};
   }
-`
+`;
 
 export const Input = styled.input`
   width: 100%;
@@ -49,7 +49,7 @@ export const Input = styled.input`
   &:focus {
     outline: 0;
   }
-`
+`;
 
 export const SelectContentContainer = styled(SelectPrimitive.Content)`
   position: relative;
@@ -62,15 +62,17 @@ export const SelectContentContainer = styled(SelectPrimitive.Content)`
   max-height: ${(props) => props.theme.space[80]};
   overflow-y: auto;
   min-height: ${(props) => props.theme.space[16]};
-`
+`;
 
 type SelectViewportContainerProps = {
-  position: "item-aligned" | "popper"
-}
+  position: "item-aligned" | "popper";
+};
 
-export const SelectViewportContainer = styled(SelectPrimitive.Viewport) <SelectViewportContainerProps>`
+export const SelectViewportContainer = styled(
+  SelectPrimitive.Viewport
+)<SelectViewportContainerProps>`
   padding: ${(props) => props.theme.space[1]};
-`
+`;
 
 export const SelectItemContainer = styled(SelectPrimitive.Item)`
   display: flex;
@@ -103,7 +105,7 @@ export const SelectItemContainer = styled(SelectPrimitive.Item)`
     background-color: ${(props) => props.theme.colors.zinc100};
   }
 
-  &[data-state='checked'] {
+  &[data-state="checked"] {
     background-color: ${(props) => props.theme.colors.amber50};
   }
-`
+`;

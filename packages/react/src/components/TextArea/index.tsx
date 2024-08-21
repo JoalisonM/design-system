@@ -1,18 +1,21 @@
-import { forwardRef, TextareaHTMLAttributes } from 'react';
-import { ThemeProvider } from 'styled-components';
-import { defaultTheme } from '../../styles/themes/default';
-import { TextAreaContainer } from './styles';
+import type { TextareaHTMLAttributes } from "react";
+import { forwardRef } from "react";
+import { ThemeProvider } from "styled-components";
 
-export type TextAreaProps = TextareaHTMLAttributes<HTMLTextAreaElement>
+import { TextAreaContainer } from "./styles";
 
-export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>((
-  { ...props }, ref
-) => {
-  return (
-    <ThemeProvider theme={defaultTheme}>
-      <TextAreaContainer ref={ref} {...props} />
-    </ThemeProvider>
-  )
-})
+import { defaultTheme } from "../../styles/themes/default";
 
-TextArea.displayName = 'TextArea'
+export type TextAreaProps = TextareaHTMLAttributes<HTMLTextAreaElement>;
+
+export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
+  ({ ...props }, ref) => {
+    return (
+      <ThemeProvider theme={defaultTheme}>
+        <TextAreaContainer ref={ref} {...props} />
+      </ThemeProvider>
+    );
+  }
+);
+
+TextArea.displayName = "TextArea";
