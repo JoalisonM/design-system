@@ -1,6 +1,5 @@
 import React, { forwardRef } from "react";
 import type { ButtonHTMLAttributes } from "react";
-import { Slot } from "@radix-ui/react-slot";
 import { ThemeProvider } from "styled-components";
 
 import { ButtonContainer } from "./styles";
@@ -10,16 +9,13 @@ import { defaultTheme } from "../../styles/themes/default";
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   size?: "default" | "sm" | "lg" | "icon";
   variant?: "default" | "destructive" | "success" | "outline" | "ghost" | "link";
-  asChild?: boolean;
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ variant = "default", size = "default", asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : ButtonContainer;
-
+  ({ variant = "default", size = "default", ...props }, ref) => {
     return (
       <ThemeProvider theme={defaultTheme}>
-        <Comp
+        <ButtonContainer
           ref={ref}
           {...props}
           variant={variant}

@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 1.5.0
+
+### Minor Changes
+
+- remove slot on button
+
 ## 1.4.0
 
 ### Minor Changes
