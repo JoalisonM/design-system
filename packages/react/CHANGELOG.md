@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 1.3.0
+
+### Minor Changes
+
+- change sizes types
+
 ## 1.2.0
 
 ### Minor Changes

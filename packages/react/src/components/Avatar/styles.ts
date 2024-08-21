@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import * as Avatar from "@radix-ui/react-avatar";
-import type { space } from "@nefex-ui/tokens";
 
 export type AvatarContainerProps = {
-  size: keyof typeof space;
+  size: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 10 | 12 | 16 | 20 | 40 | 64 | 80;
 };
 
 export const AvatarContainer = styled(Avatar.Root)<AvatarContainerProps>`

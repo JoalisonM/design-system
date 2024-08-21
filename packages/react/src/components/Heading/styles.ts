@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import type { fontSizes } from "@nefex-ui/tokens";
 
 type HeadingContainerProps = {
-  size: keyof typeof fontSizes;
+  size: "xxs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "4xl" | "5xl" | "6xl" | "7xl" | "8xl" | "9xl";;
 };
 
 export const HeadingContainer = styled.h2<HeadingContainerProps>`
