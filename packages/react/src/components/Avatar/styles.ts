@@ -1,11 +1,16 @@
 import styled from "styled-components";
 import * as Avatar from "@radix-ui/react-avatar";
+import type { space } from "@nefex-ui/tokens";
 
-export const AvatarContainer = styled(Avatar.Root)`
+export type AvatarContainerProps = {
+  size: keyof typeof space;
+};
+
+export const AvatarContainer = styled(Avatar.Root)<AvatarContainerProps>`
   border-radius: ${(props) => props.theme.radii.full};
   display: inline-block;
-  width: ${(props) => props.theme.space[12]};
-  height: ${(props) => props.theme.space[12]};
+  width: ${(props) => props.theme.space[props.size]};
+  height: ${(props) => props.theme.space[props.size]};
   overflow: hidden;
 `;
 

@@ -1,22 +1,25 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
+    "allowJs": true,
     "composite": false,
     "declaration": true,
     "declarationMap": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "inlineSources": false,
+    "resolveJsonModule": true,
     "isolatedModules": true,
     "moduleResolution": "node",
     "noUnusedLocals": false,
     "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
     "preserveWatchOutput": true,
     "skipLibCheck": true,
+    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true
   },
-  "exclude": [
-    "node_modules",
-    "dist",
-    "*.d.ts"
-  ]
+  "include": ["src/**/*", "node_modules/@types"],
+  "exclude": ["node_modules", "dist", "*.d.ts", "src/**/*.test*"]
 }
