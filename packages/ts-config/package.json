@@ -1,6 +1,9 @@
 {
   "name": "@nefex-ui/ts-config",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "ts-config-single-spa": "^3.0.0"
+  }
 }

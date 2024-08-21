@@ -1,5 +1,11 @@
 # @nefex-ui/ts-config
 
+## 2.3.0
+
+### Minor Changes
+
+- change ts configs
+
 ## 2.2.0
 
 ### Minor Changes
