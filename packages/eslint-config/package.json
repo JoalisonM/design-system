@@ -1,7 +1,8 @@
 {
   "name": "@nefex-ui/eslint-config",
   "license": "MIT",
-  "private": true,
+  "version": "3.0.0",
+  "private": false,
   "main": "index.js",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^8.2.0",

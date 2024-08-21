@@ -1,6 +1,5 @@
 {
   "name": "@nefex-ui/docs",
-  "license": "MIT",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
