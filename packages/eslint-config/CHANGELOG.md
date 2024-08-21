@@ -1,5 +1,11 @@
 # @nefex-ui/eslint-config
 
+## 3.1.0
+
+### Minor Changes
+
+- remove consistent-type-exports and consistent-type-imports
+
 ## 3.0.0
 
 ### Major Changes
