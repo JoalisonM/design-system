@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 2.0.1
+
+### Patch Changes
+
+- change styled-components version
+
 ## 2.0.0
 
 ### Major Changes
