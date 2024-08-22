@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 2.0.5
+
+### Patch Changes
+
+- change heading exports
+
 ## 2.0.4
 
 ### Patch Changes

@@ -6,12 +6,12 @@ import { HeadingContainer } from "./styles";
 
 import { defaultTheme } from "../../styles/themes/default";
 
-export type HeadingProps = HTMLAttributes<HTMLHeadingElement> & {
+type HeadingProps = HTMLAttributes<HTMLHeadingElement> & {
   size?: "xxs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "4xl" | "5xl" | "6xl" | "7xl" | "8xl" | "9xl";
   as?: ElementType;
 };
 
-export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(({ size = "md", as = "h2", ...props }, ref) => {
+const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(({ size = "md", as = "h2", ...props }, ref) => {
   return (
     <ThemeProvider theme={defaultTheme}>
       <HeadingContainer
@@ -25,3 +25,6 @@ export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(({ size = "m
 });
 
 Heading.displayName = "Heading";
+
+export { Heading };
+export type { HeadingProps };
