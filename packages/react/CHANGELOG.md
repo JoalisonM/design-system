@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 2.0.0
+
+### Major Changes
+
+- change react, typescript and tsup versions
+
 ## 1.5.0
 
 ### Minor Changes
