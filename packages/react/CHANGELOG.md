@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 2.0.2
+
+### Patch Changes
+
+- change main, module and types
+
 ## 2.0.1
 
 ### Patch Changes

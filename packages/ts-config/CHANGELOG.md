@@ -1,5 +1,11 @@
 # @nefex-ui/ts-config
 
+## 2.3.1
+
+### Patch Changes
+
+- change target to es5 and add outDir dist
+
 ## 2.3.0
 
 ### Minor Changes
