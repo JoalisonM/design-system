@@ -1,6 +1,6 @@
 {
   "name": "@nefex-ui/react",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -13,12 +13,16 @@
     "format": "prettier . --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "keywords": [],
+  "files": [
+    "dist"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "@nefex-ui/eslint-config": "*",
     "@nefex-ui/tokens": "*",
     "@nefex-ui/ts-config": "*",
+    "@swc/core": "^1.7.14",
     "@types/react": "^16.9.32",
     "@types/react-dom": "^17.0.11",
     "@types/styled-components": "^5.1.9",
