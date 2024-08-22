@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 2.0.4
+
+### Patch Changes
+
+- change package.json
+
 ## 2.0.3
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @nefex-ui/tokens
 
+## 1.2.2
+
+### Patch Changes
+
+- change package.json
+
 ## 1.2.1
 
 ### Patch Changes
