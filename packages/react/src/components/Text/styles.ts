@@ -7,6 +7,7 @@ type TextContainerProps = {
 export const TextContainer = styled.p<TextContainerProps>`
   font-family: ${(props) => props.theme.fonts.default};
   line-height: ${(props) => props.theme.lineHeights.base};
+  font-weight: ${(props) => props.theme.fontWeights.regular};
   margin: 0;
   color: ${(props) => props.theme.colors.zinc900};
   font-size: ${(props) => props.theme.fontSizes[props.size]};

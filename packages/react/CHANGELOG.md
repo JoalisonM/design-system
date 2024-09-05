@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 2.0.6
+
+### Patch Changes
+
+- remove box border, change button radii and font weight, add heading/text font weight
+
 ## 2.0.5
 
 ### Patch Changes

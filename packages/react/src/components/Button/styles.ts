@@ -13,9 +13,9 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   white-space: nowrap;
   border: 0;
   cursor: pointer;
-  border-radius: ${(props) => props.theme.radii.md};
+  border-radius: ${(props) => props.theme.radii.xs};
   font-size: ${(props) => props.theme.fontSizes.sm};
-  font-weight: ${(props) => props.theme.fontWeights.bold};
+  font-weight: ${(props) => props.theme.fontWeights.medium};
   background-color: transparent;
   transition: background-color 0.2s;
 
