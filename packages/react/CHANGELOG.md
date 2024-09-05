@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 2.0.7
+
+### Patch Changes
+
+- change box background to white
+
 ## 2.0.6
 
 ### Patch Changes
