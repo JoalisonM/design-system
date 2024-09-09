@@ -10,5 +10,6 @@ export * from "./components/Heading";
 export * from "./components/TextArea";
 export * from "./components/Checkbox";
 export * from "./components/MultiStep";
+export * from "./components/PageHeader";
 
 export * from "./styles/themes/default";

@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 3.0.0
+
+### Major Changes
+
+- add export on pageHeader and pageHeaderProps
+
 ## 2.0.8
 
 ### Patch Changes

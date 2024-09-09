@@ -1,5 +1,7 @@
 import React, { forwardRef, HTMLAttributes, ReactNode } from "react";
-import { Heading, Text } from "@nefex-ui/react";
+
+import { Text } from "../Text";
+import { Heading } from "../Heading";
 
 import {
   PageHeaderButtons,
@@ -11,13 +13,13 @@ import { ThemeProvider } from "styled-components";
 
 import { defaultTheme } from "../../styles/themes/default";
 
-type PageHeaderProps = HTMLAttributes<HTMLDivElement> & {
+export type PageHeaderProps = HTMLAttributes<HTMLDivElement> & {
   title: string;
   subTitle?: string;
   buttons?: ReactNode;
 }
 
-const PageHeader = forwardRef<HTMLDivElement, PageHeaderProps>((
+export const PageHeader = forwardRef<HTMLDivElement, PageHeaderProps>((
   { title, subTitle, buttons, children, ...props }, ref
 ) => {
   return (
