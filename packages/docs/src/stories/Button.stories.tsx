@@ -99,3 +99,14 @@ export const Icon: StoryObj<ButtonProps> = {
     size: 'icon',
   }
 }
+
+export const AsChild: StoryObj<ButtonProps> = {
+  args: {
+    asChild: true,
+    children: (
+      <>
+        <a href="https://github.com/JoalisonM" target='_blank'>Enviar</a>
+      </>
+    ),
+  }
+}

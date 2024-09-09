@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 3.0.1
+
+### Patch Changes
+
+- add asChild prop on Button
+
 ## 3.0.0
 
 ### Major Changes
