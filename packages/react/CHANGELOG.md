@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 2.0.8
+
+### Patch Changes
+
+- Create pageHeader component
+
 ## 2.0.7
 
 ### Patch Changes
