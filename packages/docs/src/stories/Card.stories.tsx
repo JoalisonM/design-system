@@ -3,7 +3,7 @@ import type { ButtonProps } from '@nefex-ui/react'
 import { Box, Button, Card, Heading, Input, Select, Option, Text } from '@nefex-ui/react'
 
 export default {
-  title: 'Surfaces/Card',
+  title: 'Data Display/Card',
   component: Button,
   args: {
     children: 'Enviar'

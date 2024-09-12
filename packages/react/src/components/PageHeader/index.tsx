@@ -27,8 +27,8 @@ export const PageHeader = forwardRef<HTMLDivElement, PageHeaderProps>((
       <PageHeaderContainer ref={ref} {...props}>
         <PageHeaderHeading subTitle={subTitle ? true : false}>
           <div>
-            <Heading as="h1" size="xl">{title}</Heading>
-            {subTitle && (<Text size="sm">{subTitle}</Text>)}
+            <Heading as="h1" size="md">{title}</Heading>
+            {subTitle && (<Text size="xs">{subTitle}</Text>)}
           </div>
 
           {buttons && (<PageHeaderButtons>{buttons}</PageHeaderButtons>)}
@@ -39,5 +39,7 @@ export const PageHeader = forwardRef<HTMLDivElement, PageHeaderProps>((
     </ThemeProvider>
   );
 });
+
+PageHeader.displayName = "PageHeader";
 
 export default PageHeader;

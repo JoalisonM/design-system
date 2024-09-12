@@ -2,7 +2,7 @@ import { StoryObj, Meta } from '@storybook/react'
 import { Box, Button, PageHeader, PageHeaderProps, Text } from '@nefex-ui/react'
 
 export default {
-  title: 'Surfaces/PageHeader',
+  title: 'Navigation/PageHeader',
   component: PageHeader,
   args: {
     title: 'Lorem Ipsum Dolor',

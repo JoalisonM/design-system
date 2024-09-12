@@ -1,7 +1,13 @@
 export const colors = {
   white: '#FFF',
   black: '#000',
-  primary: '#fca311',
+  primary: '#FF482D',
+  secondary: '#2F2A6B',
+  background: '#f8f8fb',
+
+  danger: '#DE1616',
+  success: '#0DAB01',
+  warning: '#FF9700',
 
   zinc50: '#fafafa',
   zinc100: '#f4f4f5',
@@ -19,13 +25,17 @@ export const colors = {
   amber100: '#fef3c7',
   amber200: '#fde68a',
   amber300: '#fcd34d',
-  amber400: '#fbbf24',
-  amber500: '#f59e0b',
-  amber600: '#d97706',
-  amber700: '#b45309',
-  amber800: '#92400e',
-  amber900: '#78350f',
-  amber950: '#451a03',
+
+  orange500: '#ffa302',
+  orange600: '#ff7200',
+
+  teal300: '#6fdac9',
+  teal500: '#10b1b1',
+
+  indigo800: '#2f2a6b',
+  indigo900: '#180047',
+  indigo950: '#171321',
+
 
   error25: '#FFFBFA',
   error50: '#FEF3F2',

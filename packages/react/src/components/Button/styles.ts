@@ -17,7 +17,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   font-size: ${(props) => props.theme.fontSizes.sm};
   font-weight: ${(props) => props.theme.fontWeights.medium};
   background-color: transparent;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, filter 0.2s, text-decoration 0.2s;
 
   &:focus-visible {
     outline: none;
@@ -32,11 +32,11 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   ${(props) =>
     props.variant === "default" &&
     css`
-      background-color: ${(props) => props.theme.colors.amber500};
+      background-color: ${(props) => props.theme.colors.primary};
       color: ${(props) => props.theme.colors.zinc100};
 
       &:not(:disabled):hover {
-        background-color: ${(props) => props.theme.colors.amber600};
+        filter: brightness(0.9);
       }
     `}
 
@@ -65,15 +65,15 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   ${(props) =>
     props.variant === "outline" &&
     css`
-      border: 2px solid ${(props) => props.theme.colors.amber500};
-      color: ${(props) => props.theme.colors.amber500};
+      border: 2px solid ${(props) => props.theme.colors.primary};
+      color: ${(props) => props.theme.colors.primary};
     `}
 
   ${(props) =>
     props.variant === "link" &&
     css`
       text-underline-offset: 4px;
-      color: ${(props) => props.theme.colors.amber500};
+      color: ${(props) => props.theme.colors.primary};
 
       &:not(:disabled):hover {
         text-decoration: underline;
@@ -101,7 +101,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     props.size === "sm" &&
     css`
       height: ${(props) => props.theme.space[8]};
-      border-radius: ${(props) => props.theme.radii.md};
+      border-radius: ${(props) => props.theme.radii.xs};
       padding: 0 ${(props) => props.theme.space[4]};
     `}
 
@@ -109,7 +109,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     props.size === "lg" &&
     css`
       height: ${(props) => props.theme.space[12]};
-      border-radius: ${(props) => props.theme.radii.md};
+      border-radius: ${(props) => props.theme.radii.xs};
       padding: 0 ${(props) => props.theme.space[8]};
     `}
 
