@@ -38,7 +38,7 @@ export const BadgeContainer = styled.div<BadgeContainerProps>`
     background-color: ${props.theme.colors.secondary}15;
   `}
 
-  ${(props) => props.variant === "danger" && css`
+  ${(props) => props.variant === "destructive" && css`
     color: ${props.theme.colors.danger};
     background-color: ${props.theme.colors.danger}15;
   `}

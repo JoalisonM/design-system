@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 3.0.3
+
+### Patch Changes
+
+- change destructive variant badge style
+
 ## 3.0.2
 
 ### Patch Changes
