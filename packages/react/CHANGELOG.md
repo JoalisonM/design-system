@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 3.0.5
+
+### Patch Changes
+
+- create scrollArea component
+
 ## 3.0.4
 
 ### Patch Changes
