@@ -19,7 +19,7 @@ export const TextAreaContainer = styled.textarea`
 
   &:focus {
     outline: 0;
-    box-shadow: 0 0 2px 1px ${(props) => props.theme.colors.amber500};
+    box-shadow: 0 0 2px 1px ${(props) => props.theme.colors.primary};
   }
 
   &:disabled {

@@ -30,6 +30,6 @@ export const Step = styled.div<StepProps>`
   ${(props) =>
     props.active &&
     css`
-      background-color: ${props.theme.colors.amber500};
+      background-color: ${props.theme.colors.primary};
     `}
 `;

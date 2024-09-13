@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 3.0.4
+
+### Patch Changes
+
+- change amber500 color on styles to primary color
+
 ## 3.0.3
 
 ### Patch Changes

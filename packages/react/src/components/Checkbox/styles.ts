@@ -19,12 +19,12 @@ export const CheckboxRoot = styled(Checkbox.Root)`
   justify-content: center;
 
   &[data-state="checked"] {
-    background-color: ${(props) => props.theme.colors.amber500};
+    background-color: ${(props) => props.theme.colors.primary};
   }
 
   &:focus {
     outline: 0;
-    box-shadow: 0 0 2px 1px ${(props) => props.theme.colors.amber500};
+    box-shadow: 0 0 2px 1px ${(props) => props.theme.colors.primary};
   }
 `;
 

@@ -8,10 +8,10 @@ export const InputContainer = styled.div`
   border-radius: ${(props) => props.theme.radii.xs};
   background-color: ${(props) => props.theme.colors.white};
   border: 1px solid ${(props) => props.theme.colors.zinc200};
-  padding: ${(props) => props.theme.space[3]} ${(props) => props.theme.space[4]};
+  padding: ${(props) => props.theme.space[2]} ${(props) => props.theme.space[3]};
 
   &:has(input:focus) {
-    box-shadow: 0 0 2px 1px ${(props) => props.theme.colors.amber500};
+    box-shadow: 0 0 2px 1px ${(props) => props.theme.colors.primary};
   }
 
   &:has(input:disabled) {

@@ -21,7 +21,7 @@ export const SelectTriggerContainer = styled(SelectPrimitive.Trigger)`
 
   &:focus {
     outline: 0;
-    box-shadow: 0 0 2px 1px ${(props) => props.theme.colors.amber500};
+    box-shadow: 0 0 2px 1px ${(props) => props.theme.colors.primary};
   }
 
   &:disabled {
@@ -70,7 +70,7 @@ type SelectViewportContainerProps = {
 
 export const SelectViewportContainer = styled(
   SelectPrimitive.Viewport
-)<SelectViewportContainerProps>`
+) <SelectViewportContainerProps>`
   padding: ${(props) => props.theme.space[1]};
 `;
 
@@ -94,7 +94,7 @@ export const SelectItemContainer = styled(SelectPrimitive.Item)`
   svg {
     width: ${(props) => props.theme.space[4]};
     height: ${(props) => props.theme.space[4]};
-    color: ${(props) => props.theme.colors.amber500};
+    color: ${(props) => props.theme.colors.primary};
   }
 
   &:focus {
