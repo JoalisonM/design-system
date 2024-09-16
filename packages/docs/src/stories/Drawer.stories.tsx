@@ -45,6 +45,18 @@ export const Primary: StoryObj<DrawerProps> = () => {
         title="Lorem Ipsum Dolor"
         open={open}
         onOpenChange={toggleDrawer}
+        footer={(
+          <>
+            <Button
+              size="sm"
+              variant="ghost"
+              onClick={() => toggleDrawer()}
+            >
+              Cancelar
+            </Button>
+            <Button size="sm">Salvar</Button>
+          </>
+        )}
       >
         <div>item 1</div>
         <div>item 2</div>

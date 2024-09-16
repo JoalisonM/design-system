@@ -43,19 +43,20 @@ DrawerOverlay.displayName = Dialog.Overlay.displayName;
 
 type DrawerContentRef = ElementRef<typeof Dialog.Content>
 type DrawerContentProps = ComponentPropsWithoutRef<typeof Dialog.Content> & {
+  top?: number;
   width?: number;
   children: ReactNode;
 }
 
 const DrawerContent = forwardRef<DrawerContentRef, DrawerContentProps>((
-  { children, style, width = 600, ...props }, ref
+  { children, style, width = 600, top = 0, ...props }, ref
 ) => {
   return (
     <DrawerPortal>
       <DrawerOverlay />
       <DrawerContentContainer
         ref={ref}
-        style={{ width, ...style }}
+        style={{ width, top, ...style }}
         {...props}
       >
         {children}
@@ -80,16 +81,17 @@ const DrawerHeader = ({ ...props }: DrawerHeaderProps) => {
 
 export type DrawerProps = Dialog.DialogProps & {
   title: string;
+  top?: number;
   width?: number;
   footer?: ReactNode;
   children: ReactNode;
 }
 
-export const Drawer = ({ title, children, footer, width, ...props }: DrawerProps) => {
+export const Drawer = ({ title, children, footer, width, top, ...props }: DrawerProps) => {
   return (
     <ThemeProvider theme={defaultTheme}>
       <DrawerRoot {...props}>
-        <DrawerContent width={width}>
+        <DrawerContent width={width} top={top}>
           <DrawerHeader>
             <Dialog.Title asChild>
               <Heading size="xl">{title}</Heading>
