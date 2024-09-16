@@ -26,6 +26,7 @@
 	},
 	"ignorePatterns": ["*.js", "dist", "node_modules", "examples", "scripts", "*.d.ts"],
 	"rules": {
+		"semi": "error",
 		"eqeqeq": "error",
 		"no-console": "warn",
 		"no-debugger": "warn",

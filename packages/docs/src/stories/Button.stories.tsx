@@ -66,7 +66,7 @@ export const Destructive: StoryObj<ButtonProps> = {
 export const Ghost: StoryObj<ButtonProps> = {
   args: {
     variant: 'ghost',
-    size: 'default'
+    size: 'default',
   }
 }
 

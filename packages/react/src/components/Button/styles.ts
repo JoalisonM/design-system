@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
 type ButtonContainerProps = {
+  hover: "default" | "info" | "danger";
   size: "default" | "sm" | "lg" | "icon";
   variant: "default" | "destructive" | "success" | "outline" | "ghost" | "link";
 };
@@ -17,11 +18,11 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   font-size: ${(props) => props.theme.fontSizes.sm};
   font-weight: ${(props) => props.theme.fontWeights.medium};
   background-color: transparent;
-  transition: background-color 0.2s, filter 0.2s, text-decoration 0.2s;
+  transition: background-color 0.2s, filter 0.2s, text-decoration 0.2s, color 0.2s;
 
   &:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 calc(2px + 2px) ${(props) => props.theme.colors.amber200};
+    box-shadow: 0 0 0 calc(2px + 2px) ${(props) => props.theme.colors.primary}70;
   }
 
   &:disabled {
@@ -118,5 +119,23 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     css`
       width: ${(props) => props.theme.space[10]};
       height: ${(props) => props.theme.space[10]};
+    `}
+
+  ${(props) =>
+    props.hover === "info" &&
+    css`
+      &:not(:disabled):hover {
+        background-color: ${(props) => props.theme.colors.teal300}15;
+        color: ${(props) => props.theme.colors.teal300};
+      }
+    `}
+
+  ${(props) =>
+    props.hover === "danger" &&
+    css`
+      &:not(:disabled):hover {
+        background-color: ${(props) => props.theme.colors.danger}15;
+        color: ${(props) => props.theme.colors.danger};
+      }
     `}
 `;
