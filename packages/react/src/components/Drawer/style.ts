@@ -96,6 +96,7 @@ export const DrawerHeaderContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 1.5rem 0 1.5rem;
+  margin-top: 4rem;
 `;
 
 export const DrawerFooterContainer = styled.div`

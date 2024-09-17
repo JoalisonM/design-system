@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 3.0.8
+
+### Patch Changes
+
+- remove top prop on drawer
+
 ## 3.0.7
 
 ### Patch Changes
