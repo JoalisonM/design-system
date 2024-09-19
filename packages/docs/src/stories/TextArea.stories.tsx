@@ -1,5 +1,5 @@
 import { StoryObj, Meta } from '@storybook/react'
-import { Box, TextArea, TextAreaProps, Text } from '@nefex-ui/react'
+import { Box, TextArea, TextAreaProps } from '@nefex-ui/react'
 
 export default {
   title: 'Form/Text Area',
@@ -10,8 +10,7 @@ export default {
   decorators: [
     (Story) => {
       return (
-        <Box as="label" style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-          <Text size='sm'>Something:</Text>
+        <Box>
           {Story()}
         </Box>
       )

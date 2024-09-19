@@ -4,6 +4,7 @@ export const TextAreaContainer = styled.textarea`
   display: flex;
   align-items: baseline;
 
+  width: 100%;
   min-height: 80px;
   border-radius: ${(props) => props.theme.radii.xs};
   background-color: ${(props) => props.theme.colors.white};

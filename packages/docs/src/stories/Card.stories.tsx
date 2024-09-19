@@ -1,6 +1,6 @@
 import { StoryObj, Meta } from '@storybook/react'
 import type { ButtonProps } from '@nefex-ui/react'
-import { Box, Button, Card, Heading, Input, Select, Option, Text } from '@nefex-ui/react'
+import { Box, Button, Card, Heading, Input, Text } from '@nefex-ui/react'
 
 export default {
   title: 'Data Display/Card',
@@ -22,12 +22,6 @@ export default {
             </Card.Header>
             <Card.Content style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <Input placeholder='lorem ipsum dolor' />
-
-              <Select placeholder='lorem ipsum dolor'>
-                <Option value='lorem'>lorem</Option>
-                <Option value='ipsum'>ipsum</Option>
-                <Option value='dolor'>dolor</Option>
-              </Select>
             </Card.Content>
             <Card.Footer>
               {Story()}

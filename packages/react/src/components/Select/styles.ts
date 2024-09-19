@@ -7,7 +7,7 @@ export const SelectTriggerContainer = styled(SelectPrimitive.Trigger)`
   justify-content: space-between;
   gap: ${(props) => props.theme.space[5]};
 
-  height: 45px;
+  height: 42px;
   width: 100%;
   border-radius: ${(props) => props.theme.radii.xs};
   background-color: ${(props) => props.theme.colors.white};
@@ -70,25 +70,27 @@ export const SelectViewportContainer = styled(
 `;
 
 export const SelectItemContainer = styled(SelectPrimitive.Item)`
+  position: relative;
+  width: 100%;
+  user-select: none;
+  cursor: pointer;
   display: flex;
   align-items: center;
+  padding-right: ${(props) => props.theme.space[2]};
   gap: ${(props) => props.theme.space[2]};
   border-radius: ${(props) => props.theme.radii.xs};
-  padding: ${(props) => props.theme.space[3]} ${(props) => props.theme.space[4]};
+  padding: ${(props) => props.theme.space[2]} 0;
+  padding-left: ${(props) => props.theme.space[8]};
+  padding-right: ${(props) => props.theme.space[2]};
 
   font-family: ${(props) => props.theme.fonts.default};
   font-size: ${(props) => props.theme.fontSizes.sm};
   color: ${(props) => props.theme.colors.zinc800};
   font-weight: ${(props) => props.theme.fontWeights.regular};
 
-  span {
-    display: inline-flex;
-    align-items: center;
-  }
-
   svg {
-    width: ${(props) => props.theme.space[4]};
-    height: ${(props) => props.theme.space[4]};
+    width: 1rem;
+    height: 1rem;
     color: ${(props) => props.theme.colors.primary};
   }
 
@@ -101,6 +103,16 @@ export const SelectItemContainer = styled(SelectPrimitive.Item)`
   }
 
   &[data-state="checked"] {
-    background-color: ${(props) => props.theme.colors.amber50};
+    background-color: ${(props) => props.theme.colors.primary}15;
   }
+`;
+
+export const ItemIndicatorContainer = styled.span`
+  position: absolute;
+  left: ${(props) => props.theme.space[2]};
+  height: 0.875rem;
+  width: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

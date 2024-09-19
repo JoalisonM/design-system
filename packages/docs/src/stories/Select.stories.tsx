@@ -1,5 +1,5 @@
 import { StoryObj, Meta } from '@storybook/react'
-import { Box, Select, Option, SelectProps } from '@nefex-ui/react'
+import { Box, Select, SelectProps } from '@nefex-ui/react'
 
 export default {
   title: 'Form/Select',
@@ -9,22 +9,22 @@ export default {
     showSearch: true,
     children: (
       <>
-        <Option value='Apple'>Apple</Option>
-        <Option value='Orange'>Orange</Option>
-        <Option value='A'>A</Option>
-        <Option value='B'>B</Option>
-        <Option value='C'>C</Option>
-        <Option value='D'>D</Option>
-        <Option value='E'>E</Option>
-        <Option value='F'>F</Option>
-        <Option value='G'>G</Option>
-        <Option value='H'>H</Option>
-        <Option value='J'>J</Option>
-        <Option value='K'>K</Option>
-        <Option value='L'>L</Option>
-        <Option value='M'>M</Option>
-        <Option value='N'>N</Option>
-        <Option value='O'>O</Option>
+        <Select.Option value='Apple'>Apple</Select.Option>
+        <Select.Option value='Orange'>Orange</Select.Option>
+        <Select.Option value='A'>A</Select.Option>
+        <Select.Option value='B'>B</Select.Option>
+        <Select.Option value='C'>C</Select.Option>
+        <Select.Option value='D'>D</Select.Option>
+        <Select.Option value='E'>E</Select.Option>
+        <Select.Option value='F'>F</Select.Option>
+        <Select.Option value='G'>G</Select.Option>
+        <Select.Option value='H'>H</Select.Option>
+        <Select.Option value='J'>J</Select.Option>
+        <Select.Option value='K'>K</Select.Option>
+        <Select.Option value='L'>L</Select.Option>
+        <Select.Option value='M'>M</Select.Option>
+        <Select.Option value='N'>N</Select.Option>
+        <Select.Option value='O'>O</Select.Option>
       </>
     ),
   },
