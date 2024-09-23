@@ -7,6 +7,7 @@ export default {
   args: {
     placeholder: 'Select something',
     showSearch: true,
+    defaultValue: "Orange",
     children: (
       <>
         <Select.Option value='Apple'>Apple</Select.Option>

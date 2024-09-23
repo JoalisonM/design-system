@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 3.0.10
+
+### Patch Changes
+
+- adjust select ref
+
 ## 3.0.9
 
 ### Patch Changes

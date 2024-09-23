@@ -76,7 +76,6 @@ export const SelectItemContainer = styled(SelectPrimitive.Item)`
   cursor: pointer;
   display: flex;
   align-items: center;
-  padding-right: ${(props) => props.theme.space[2]};
   gap: ${(props) => props.theme.space[2]};
   border-radius: ${(props) => props.theme.radii.xs};
   padding: ${(props) => props.theme.space[2]} 0;
@@ -103,13 +102,15 @@ export const SelectItemContainer = styled(SelectPrimitive.Item)`
   }
 
   &[data-state="checked"] {
+    color: ${(props) => props.theme.colors.primary};
     background-color: ${(props) => props.theme.colors.primary}15;
   }
 `;
 
 export const ItemIndicatorContainer = styled.span`
   position: absolute;
-  left: ${(props) => props.theme.space[2]};
+  top: 14px;
+  left: 8px;
   height: 0.875rem;
   width: 0.875rem;
   display: flex;

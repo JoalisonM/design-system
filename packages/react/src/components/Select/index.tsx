@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import { ThemeProvider } from "styled-components";
 import { Check, ChevronDown } from "lucide-react";
 import * as SelectPrimitive from "@radix-ui/react-select";
-import type { ComponentProps, ComponentPropsWithoutRef, ElementRef, ForwardRefExoticComponent, RefAttributes } from "react";
+import type { ComponentPropsWithoutRef, ElementRef, ForwardRefExoticComponent, RefAttributes } from "react";
 
 import {
   SelectItemContainer,
@@ -79,28 +79,28 @@ const Option = forwardRef<OptionRef, OptionProps>(({ children, ...props }, ref) 
 
 Option.displayName = "Option";
 
-export type SelectProps = ComponentProps<typeof SelectPrimitive.Trigger> & {
+type SelectRef = ElementRef<typeof SelectPrimitive.Root>;
+export type SelectProps = ComponentPropsWithoutRef<typeof SelectPrimitive.Root> & {
   placeholder?: string;
 };
 
 type SelectComponent = ForwardRefExoticComponent<
-  SelectProps & RefAttributes<HTMLButtonElement>
+  SelectProps & RefAttributes<SelectRef>
 > & {
   Option: typeof Option;
 };
 
-export const Select = forwardRef<HTMLButtonElement, SelectProps>(({ children, placeholder, ...props }, ref) => {
+export const Select = forwardRef<SelectRef, SelectProps>(({ children, placeholder, ...props }, ref) => {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <SelectPrimitive.Root>
-        <SelectTrigger
-          ref={ref}
-          {...props}
-        >
+      <SelectPrimitive.Root ref={ref} {...props}>
+        <SelectTrigger>
           <SelectPrimitive.Value placeholder={placeholder} />
         </SelectTrigger>
 
-        <SelectContent sideOffset={3}>{children}</SelectContent>
+        <SelectContent sideOffset={3}>
+          {children}
+        </SelectContent>
       </SelectPrimitive.Root>
     </ThemeProvider>
   );
