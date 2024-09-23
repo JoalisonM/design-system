@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 3.0.12
+
+### Patch Changes
+
+- fix: @radix-ui/react-focus-scope version
+
 ## 3.0.11
 
 ### Patch Changes
