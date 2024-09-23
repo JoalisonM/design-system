@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 3.0.11
+
+### Patch Changes
+
+- fix: remove ref on select
+
 ## 3.0.10
 
 ### Patch Changes

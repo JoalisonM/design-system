@@ -93,7 +93,7 @@ type SelectComponent = ForwardRefExoticComponent<
 export const Select = forwardRef<SelectRef, SelectProps>(({ children, placeholder, ...props }, ref) => {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <SelectPrimitive.Root ref={ref} {...props}>
+      <SelectPrimitive.Root {...props}>
         <SelectTrigger>
           <SelectPrimitive.Value placeholder={placeholder} />
         </SelectTrigger>
