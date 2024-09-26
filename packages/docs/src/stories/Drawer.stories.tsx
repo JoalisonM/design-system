@@ -1,5 +1,5 @@
 import { StoryObj, Meta } from '@storybook/react'
-import { Box, Button, Drawer, DrawerProps } from '@nefex-ui/react'
+import { Box, Button, Drawer, DrawerProps, Select } from '@nefex-ui/react'
 import { useArgs } from '@storybook/client-api'
 
 export default {
@@ -9,13 +9,6 @@ export default {
     title: 'Lorem Ipsum Dolor',
     open: false,
     onOpenChange: () => { },
-    children: (
-      <>
-        <div>item 1</div>
-        <div>item 2</div>
-        <div>item 3</div>
-      </>
-    )
   },
   decorators: [
     (Story) => {
@@ -58,9 +51,13 @@ export const Primary: StoryObj<DrawerProps> = () => {
           </>
         )}
       >
-        <div>item 1</div>
-        <div>item 2</div>
-        <div>item 3</div>
+        <Box>
+          <Select placeholder="Selecione o usuário">
+            <Select.Option value="João">João</Select.Option>
+            <Select.Option value="Maria">Maria</Select.Option>
+            <Select.Option value="José">José</Select.Option>
+          </Select>
+        </Box>
       </Drawer>
     </>
   )

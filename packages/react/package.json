@@ -1,6 +1,6 @@
 {
   "name": "@nefex-ui/react",
-  "version": "3.0.12",
+  "version": "3.0.13",
   "description": "",
   "exports": {
     ".": {
@@ -46,15 +46,18 @@
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.0",
     "@radix-ui/react-checkbox": "^1.1.1",
-    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-scroll-area": "^1.0.5",
-    "@radix-ui/react-select": "^1.2.2",
+    "@radix-ui/react-select": "^2.1.1",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-switch": "^1.1.0",
     "install": "^0.13.0",
     "lucide-react": "^0.428.0",
     "npm": "^10.8.3",
     "styled-components": "^5.3.0"
+  },
+  "resolutions": {
+    "@radix-ui/react-focus-scope": "1.0.4"
   },
   "overrides": {
     "@radix-ui/react-focus-scope": "1.0.4"

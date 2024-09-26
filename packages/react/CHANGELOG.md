@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 3.0.13
+
+### Patch Changes
+
+- fix: change radix-dialog and radix-select to latest version
+
 ## 3.0.12
 
 ### Patch Changes
