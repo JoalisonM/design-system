@@ -51,13 +51,11 @@ export const Primary: StoryObj<DrawerProps> = () => {
           </>
         )}
       >
-        <Box>
-          <Select placeholder="Selecione o usuário">
-            <Select.Option value="João">João</Select.Option>
-            <Select.Option value="Maria">Maria</Select.Option>
-            <Select.Option value="José">José</Select.Option>
-          </Select>
-        </Box>
+        <Select placeholder="Selecione o usuário">
+          <Select.Option value="João">João</Select.Option>
+          <Select.Option value="Maria">Maria</Select.Option>
+          <Select.Option value="José">José</Select.Option>
+        </Select>
       </Drawer>
     </>
   )

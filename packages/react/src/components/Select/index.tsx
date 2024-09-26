@@ -56,7 +56,7 @@ const SelectContent = forwardRef<SelectContentRef, SelectContentProps>(
 SelectContent.displayName = SelectPrimitive.Content.displayName;
 
 type OptionRef = ElementRef<typeof SelectPrimitive.Item>;
-type OptionProps = ComponentPropsWithoutRef<typeof SelectPrimitive.Item>;
+type OptionProps = SelectPrimitive.SelectItemProps
 
 const Option = forwardRef<OptionRef, OptionProps>(({ children, ...props }, ref) => {
   return (

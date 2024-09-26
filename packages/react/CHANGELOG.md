@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 3.0.14
+
+### Patch Changes
+
+- fix: add z-index on Option
+
 ## 3.0.13
 
 ### Patch Changes

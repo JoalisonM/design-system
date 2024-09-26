@@ -71,6 +71,7 @@ export const SelectViewportContainer = styled(
 
 export const SelectItemContainer = styled(SelectPrimitive.Item)`
   position: relative;
+  z-index: 9999;
   width: 100%;
   user-select: none;
   cursor: pointer;
