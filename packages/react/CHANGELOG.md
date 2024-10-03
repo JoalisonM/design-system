@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 3.0.15
+
+### Patch Changes
+
+- remove themeProvider from components
+
 ## 3.0.14
 
 ### Patch Changes

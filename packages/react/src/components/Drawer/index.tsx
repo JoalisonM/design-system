@@ -7,7 +7,6 @@ import React, {
 } from "react";
 import { X } from "lucide-react";
 import * as Dialog from "@radix-ui/react-dialog";
-import { ThemeProvider } from "styled-components";
 
 import {
   DrawerBodyContainer,
@@ -18,7 +17,6 @@ import {
 } from "./style";
 
 import { Heading } from "../Heading";
-import { defaultTheme } from "../../styles/themes/default";
 
 const DrawerRoot = Dialog.Root;
 
@@ -86,24 +84,22 @@ export type DrawerProps = Dialog.DialogProps & {
 
 export const Drawer = ({ title, children, footer, width, ...props }: DrawerProps) => {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <DrawerRoot {...props}>
-        <DrawerContent width={width}>
-          <DrawerHeader>
-            <Dialog.Title asChild>
-              <Heading size="xl">{title}</Heading>
-            </Dialog.Title>
-          </DrawerHeader>
+    <DrawerRoot {...props}>
+      <DrawerContent width={width}>
+        <DrawerHeader>
+          <Dialog.Title asChild>
+            <Heading size="xl">{title}</Heading>
+          </Dialog.Title>
+        </DrawerHeader>
 
-          <DrawerBody>{children}</DrawerBody>
+        <DrawerBody>{children}</DrawerBody>
 
-          {footer && (
-            <DrawerFooterContainer>
-              {footer}
-            </DrawerFooterContainer>
-          )}
-        </DrawerContent>
-      </DrawerRoot>
-    </ThemeProvider>
+        {footer && (
+          <DrawerFooterContainer>
+            {footer}
+          </DrawerFooterContainer>
+        )}
+      </DrawerContent>
+    </DrawerRoot>
   );
 };

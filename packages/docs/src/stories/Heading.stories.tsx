@@ -1,5 +1,7 @@
 import { StoryObj, Meta } from '@storybook/react'
 import { Box, Heading, HeadingProps } from '@nefex-ui/react'
+import { ThemeProvider } from 'styled-components'
+import { theme } from '../config/theme'
 
 export default {
   title: 'Typography/Heading',
@@ -30,9 +32,11 @@ export const Primary: StoryObj<HeadingProps> = {
   decorators: [
     (Story) => {
       return (
-        <Box>
-          {Story()}
-        </Box>
+        <ThemeProvider theme={theme}>
+          <Box>
+            {Story()}
+          </Box>
+        </ThemeProvider>
       )
     }
   ]

@@ -1,6 +1,8 @@
 import { StoryObj, Meta } from '@storybook/react'
 import { Box, Button, Drawer, DrawerProps, Select } from '@nefex-ui/react'
 import { useArgs } from '@storybook/client-api'
+import { ThemeProvider } from 'styled-components'
+import { theme } from '../config/theme'
 
 export default {
   title: 'Feedback/Drawer',
@@ -13,9 +15,11 @@ export default {
   decorators: [
     (Story) => {
       return (
-        <Box>
-          {Story()}
-        </Box>
+        <ThemeProvider theme={theme}>
+          <Box>
+            {Story()}
+          </Box>
+        </ThemeProvider>
       )
     }
   ]

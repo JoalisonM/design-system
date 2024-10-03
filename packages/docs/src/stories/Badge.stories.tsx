@@ -1,5 +1,7 @@
 import { StoryObj, Meta } from '@storybook/react'
+import { ThemeProvider } from 'styled-components'
 import { Box, Badge, BadgeProps } from '@nefex-ui/react'
+import { theme } from '../config/theme'
 
 export default {
   title: 'Data Display/Badge',
@@ -10,9 +12,11 @@ export default {
   decorators: [
     (Story) => {
       return (
-        <Box>
-          {Story()}
-        </Box>
+        <ThemeProvider theme={theme}>
+          <Box>
+            {Story()}
+          </Box>
+        </ThemeProvider>
       )
     }
   ]
@@ -34,10 +38,10 @@ export const Outline: StoryObj<BadgeProps> = {
   }
 }
 
-export const Danger: StoryObj<BadgeProps> = {
+export const Destructive: StoryObj<BadgeProps> = {
   args: {
-    variant: 'danger',
-    children: 'Danger'
+    variant: 'destructive',
+    children: 'Destructive'
   }
 }
 

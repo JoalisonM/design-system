@@ -1,5 +1,7 @@
 import { StoryObj, Meta } from '@storybook/react'
 import { Box, Select, SelectProps } from '@nefex-ui/react'
+import { ThemeProvider } from 'styled-components'
+import { theme } from '../config/theme'
 
 export default {
   title: 'Form/Select',
@@ -32,9 +34,11 @@ export default {
   decorators: [
     (Story) => {
       return (
-        <Box>
-          {Story()}
-        </Box>
+        <ThemeProvider theme={theme}>
+          <Box>
+            {Story()}
+          </Box>
+        </ThemeProvider>
       )
     }
   ]

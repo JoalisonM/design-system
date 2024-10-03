@@ -1,5 +1,4 @@
 import React, { forwardRef } from "react";
-import { ThemeProvider } from "styled-components";
 import { Check, ChevronDown } from "lucide-react";
 import * as SelectPrimitive from "@radix-ui/react-select";
 import type { ComponentPropsWithoutRef, ElementRef, ForwardRefExoticComponent, RefAttributes } from "react";
@@ -12,15 +11,16 @@ import {
   SelectViewportContainer,
 } from "./styles";
 
-import { defaultTheme } from "../../styles/themes/default";
-
 type SelectTriggerRef = ElementRef<typeof SelectPrimitive.Trigger>;
-type SelectTriggerProps = ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>;
+type SelectTriggerProps = ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger> & {
+  width?: number;
+};
 
-const SelectTrigger = forwardRef<SelectTriggerRef, SelectTriggerProps>(({ children, ...props }, ref) => {
+const SelectTrigger = forwardRef<SelectTriggerRef, SelectTriggerProps>(({ children, width = "100%", ...props }, ref) => {
   return (
     <SelectTriggerContainer
       ref={ref}
+      style={{ width }}
       {...props}
     >
       {children}
@@ -60,20 +60,18 @@ type OptionProps = SelectPrimitive.SelectItemProps
 
 const Option = forwardRef<OptionRef, OptionProps>(({ children, ...props }, ref) => {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <SelectItemContainer
-        ref={ref}
-        {...props}
-      >
-        <ItemIndicatorContainer>
-          <SelectPrimitive.ItemIndicator>
-            <Check strokeWidth={3} />
-          </SelectPrimitive.ItemIndicator>
-        </ItemIndicatorContainer>
+    <SelectItemContainer
+      ref={ref}
+      {...props}
+    >
+      <ItemIndicatorContainer>
+        <SelectPrimitive.ItemIndicator>
+          <Check strokeWidth={3} />
+        </SelectPrimitive.ItemIndicator>
+      </ItemIndicatorContainer>
 
-        <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
-      </SelectItemContainer>
-    </ThemeProvider>
+      <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
+    </SelectItemContainer>
   );
 });
 
@@ -81,6 +79,7 @@ Option.displayName = "Option";
 
 type SelectRef = ElementRef<typeof SelectPrimitive.Root>;
 export type SelectProps = ComponentPropsWithoutRef<typeof SelectPrimitive.Root> & {
+  width?: number;
   placeholder?: string;
 };
 
@@ -90,19 +89,17 @@ type SelectComponent = ForwardRefExoticComponent<
   Option: typeof Option;
 };
 
-export const Select = forwardRef<SelectRef, SelectProps>(({ children, placeholder, ...props }, ref) => {
+export const Select = forwardRef<SelectRef, SelectProps>(({ children, placeholder, width, ...props }, ref) => {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <SelectPrimitive.Root {...props}>
-        <SelectTrigger>
-          <SelectPrimitive.Value placeholder={placeholder} />
-        </SelectTrigger>
+    <SelectPrimitive.Root {...props}>
+      <SelectTrigger width={width}>
+        <SelectPrimitive.Value placeholder={placeholder} />
+      </SelectTrigger>
 
-        <SelectContent sideOffset={3}>
-          {children}
-        </SelectContent>
-      </SelectPrimitive.Root>
-    </ThemeProvider>
+      <SelectContent sideOffset={3}>
+        {children}
+      </SelectContent>
+    </SelectPrimitive.Root>
   );
 }) as SelectComponent;
 

@@ -7,9 +7,6 @@ import {
   ScrollAreaViewport,
   ScrollAreaScrollbar,
 } from "./style";
-import { ThemeProvider } from "styled-components";
-
-import { defaultTheme } from "../../styles/themes/default";
 
 type ScrollAreaRef = ElementRef<typeof ScrollAreaPrimitive.Root>
 export type ScrollAreaProps =
@@ -22,20 +19,18 @@ export const ScrollArea = forwardRef<ScrollAreaRef, ScrollAreaProps>((
   { width, style, children, height = 300, ...props }, ref
 ) => {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <ScrollAreaRoot
-        ref={ref}
-        style={{ height, width, ...style }}
-        {...props}
-      >
-        <ScrollAreaViewport>
-          {children}
-        </ScrollAreaViewport>
+    <ScrollAreaRoot
+      ref={ref}
+      style={{ height, width, ...style }}
+      {...props}
+    >
+      <ScrollAreaViewport>
+        {children}
+      </ScrollAreaViewport>
 
-        <ScrollBar />
-        <ScrollAreaPrimitive.Corner />
-      </ScrollAreaRoot>
-    </ThemeProvider>
+      <ScrollBar />
+      <ScrollAreaPrimitive.Corner />
+    </ScrollAreaRoot>
   );
 });
 

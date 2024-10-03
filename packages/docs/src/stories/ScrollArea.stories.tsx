@@ -1,5 +1,7 @@
 import { StoryObj, Meta } from '@storybook/react'
 import { Box, ScrollArea, ScrollAreaProps } from '@nefex-ui/react'
+import { ThemeProvider } from 'styled-components'
+import { theme } from '../config/theme'
 
 export default {
   title: 'Surfaces/ScrollArea',
@@ -37,9 +39,11 @@ export default {
   decorators: [
     (Story) => {
       return (
-        <Box as="label" style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-          {Story()}
-        </Box>
+        <ThemeProvider theme={theme}>
+          <Box>
+            {Story()}
+          </Box>
+        </ThemeProvider>
       )
     }
   ]

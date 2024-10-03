@@ -1,10 +1,7 @@
 import React, { forwardRef } from "react";
-import { ThemeProvider } from "styled-components";
 import type { ElementType, HTMLAttributes } from "react";
 
 import { TextContainer } from "./styles";
-
-import { defaultTheme } from "../../styles/themes/default";
 
 export type TextProps = HTMLAttributes<HTMLParagraphElement> & {
   as?: ElementType;
@@ -13,14 +10,12 @@ export type TextProps = HTMLAttributes<HTMLParagraphElement> & {
 
 export const Text = forwardRef<HTMLParagraphElement, TextProps>(({ size = "md", as = "p", ...props }, ref) => {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <TextContainer
-        ref={ref}
-        {...props}
-        size={size}
-        as={as}
-      />
-    </ThemeProvider>
+    <TextContainer
+      ref={ref}
+      {...props}
+      size={size}
+      as={as}
+    />
   );
 });
 

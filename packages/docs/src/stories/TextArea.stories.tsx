@@ -1,5 +1,7 @@
 import { StoryObj, Meta } from '@storybook/react'
 import { Box, TextArea, TextAreaProps } from '@nefex-ui/react'
+import { ThemeProvider } from 'styled-components'
+import { theme } from '../config/theme'
 
 export default {
   title: 'Form/Text Area',
@@ -10,9 +12,11 @@ export default {
   decorators: [
     (Story) => {
       return (
-        <Box>
-          {Story()}
-        </Box>
+        <ThemeProvider theme={theme}>
+          <Box>
+            {Story()}
+          </Box>
+        </ThemeProvider>
       )
     }
   ]

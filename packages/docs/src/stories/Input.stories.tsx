@@ -1,5 +1,7 @@
 import { StoryObj, Meta } from '@storybook/react'
 import { Box, Input, InputProps, Text } from '@nefex-ui/react'
+import { ThemeProvider } from 'styled-components'
+import { theme } from '../config/theme'
 
 export default {
   title: 'Form/Input',
@@ -10,10 +12,12 @@ export default {
   decorators: [
     (Story) => {
       return (
-        <Box as="label" style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-          <Text size='sm'>Something:</Text>
-          {Story()}
-        </Box>
+        <ThemeProvider theme={theme}>
+          <Box as="label" style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <Text size='sm'>Something:</Text>
+            {Story()}
+          </Box>
+        </ThemeProvider>
       )
     }
   ]

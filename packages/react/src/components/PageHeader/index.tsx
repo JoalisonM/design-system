@@ -1,17 +1,14 @@
 import React, { forwardRef, HTMLAttributes, ReactNode } from "react";
 
-import { Text } from "../Text";
-import { Heading } from "../Heading";
-
 import {
   PageHeaderButtons,
   PageHeaderContent,
   PageHeaderHeading,
   PageHeaderContainer,
 } from "./style";
-import { ThemeProvider } from "styled-components";
 
-import { defaultTheme } from "../../styles/themes/default";
+import { Text } from "../Text";
+import { Heading } from "../Heading";
 
 export type PageHeaderProps = HTMLAttributes<HTMLDivElement> & {
   title: string;
@@ -23,20 +20,18 @@ export const PageHeader = forwardRef<HTMLDivElement, PageHeaderProps>((
   { title, subTitle, buttons, children, ...props }, ref
 ) => {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <PageHeaderContainer ref={ref} {...props}>
-        <PageHeaderHeading subTitle={subTitle ? true : false}>
-          <div>
-            <Heading as="h1" size="md">{title}</Heading>
-            {subTitle && (<Text size="xs">{subTitle}</Text>)}
-          </div>
+    <PageHeaderContainer ref={ref} {...props}>
+      <PageHeaderHeading subTitle={subTitle ? true : false}>
+        <div>
+          <Heading as="h1" size="md">{title}</Heading>
+          {subTitle && (<Text size="xs">{subTitle}</Text>)}
+        </div>
 
-          {buttons && (<PageHeaderButtons>{buttons}</PageHeaderButtons>)}
-        </PageHeaderHeading>
+        {buttons && (<PageHeaderButtons>{buttons}</PageHeaderButtons>)}
+      </PageHeaderHeading>
 
-        {children && (<PageHeaderContent>{children}</PageHeaderContent>)}
-      </PageHeaderContainer>
-    </ThemeProvider>
+      {children && (<PageHeaderContent>{children}</PageHeaderContent>)}
+    </PageHeaderContainer>
   );
 });
 

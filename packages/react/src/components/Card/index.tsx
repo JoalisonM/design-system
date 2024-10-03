@@ -1,19 +1,14 @@
 import React, { forwardRef } from "react";
 import type { HTMLAttributes } from "react";
-import { ThemeProvider } from "styled-components";
 
 import { CardContainer, CardHeaderContainer, CardFooterContainer, CardContentContainer } from "./style";
 
-import { defaultTheme } from "../../styles/themes/default";
-
 const Root = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(({ ...props }, ref) => {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <CardContainer
-        ref={ref}
-        {...props}
-      />
-    </ThemeProvider>
+    <CardContainer
+      ref={ref}
+      {...props}
+    />
   );
 });
 Root.displayName = "Root";

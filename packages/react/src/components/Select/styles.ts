@@ -8,7 +8,6 @@ export const SelectTriggerContainer = styled(SelectPrimitive.Trigger)`
   gap: ${(props) => props.theme.space[5]};
 
   height: 42px;
-  width: 100%;
   border-radius: ${(props) => props.theme.radii.xs};
   background-color: ${(props) => props.theme.colors.white};
   border: 1px solid ${(props) => props.theme.colors.zinc200};

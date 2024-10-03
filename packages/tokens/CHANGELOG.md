@@ -1,5 +1,11 @@
 # @nefex-ui/tokens
 
+## 1.2.4
+
+### Patch Changes
+
+- add slate colors
+
 ## 1.2.3
 
 ### Patch Changes

@@ -1,5 +1,4 @@
 import React, { forwardRef, useState } from "react";
-import { ThemeProvider } from "styled-components";
 import { Check, ChevronDown, Search } from "lucide-react";
 import * as SelectPrimitive from "@radix-ui/react-select";
 import type { ComponentPropsWithoutRef, ElementRef } from "react";
@@ -11,8 +10,6 @@ import {
   SelectTriggerContainer,
   SelectViewportContainer,
 } from "./styles";
-
-import { defaultTheme } from "../../styles/themes/default";
 
 type SelectTriggerRef = ElementRef<typeof SelectPrimitive.Trigger>;
 type SelectTriggerProps = ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger> & {
@@ -60,21 +57,19 @@ type OptionProps = ComponentPropsWithoutRef<typeof SelectPrimitive.Item>;
 
 export const SearchOption = forwardRef<OptionRef, OptionProps>(({ children, ...props }, ref) => {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <SelectItemContainer
-        ref={ref}
-        {...props}
-      >
-        <SelectPrimitive.ItemIndicator>
-          <Check
-            strokeWidth={3}
-            className="h-4 w-4 text-blueLagoon"
-          />
-        </SelectPrimitive.ItemIndicator>
+    <SelectItemContainer
+      ref={ref}
+      {...props}
+    >
+      <SelectPrimitive.ItemIndicator>
+        <Check
+          strokeWidth={3}
+          className="h-4 w-4 text-blueLagoon"
+        />
+      </SelectPrimitive.ItemIndicator>
 
-        <SelectPrimitive.ItemText className="text-black">{children}</SelectPrimitive.ItemText>
-      </SelectItemContainer>
-    </ThemeProvider>
+      <SelectPrimitive.ItemText className="text-black">{children}</SelectPrimitive.ItemText>
+    </SelectItemContainer>
   );
 });
 
@@ -102,23 +97,21 @@ export const SelectSearch = forwardRef<SelectSearchRef, SelectSearchProps>(
     };
 
     return (
-      <ThemeProvider theme={defaultTheme}>
-        <SelectPrimitive.Root
-          ref={ref}
-          open={open}
-          onOpenChange={handleToggleOpen}
-          {...props}
-        >
-          <SelectTrigger open={open}>
-            <Input
-              placeholder={placeholder}
-              onChange={(event) => handleSearch(event.target.value)}
-            />
-          </SelectTrigger>
+      <SelectPrimitive.Root
+        ref={ref}
+        open={open}
+        onOpenChange={handleToggleOpen}
+        {...props}
+      >
+        <SelectTrigger open={open}>
+          <Input
+            placeholder={placeholder}
+            onChange={(event) => handleSearch(event.target.value)}
+          />
+        </SelectTrigger>
 
-          <SelectContent sideOffset={3}>{children}</SelectContent>
-        </SelectPrimitive.Root>
-      </ThemeProvider>
+        <SelectContent sideOffset={3}>{children}</SelectContent>
+      </SelectPrimitive.Root>
     );
   }
 );
