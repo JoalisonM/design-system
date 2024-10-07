@@ -37,7 +37,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
       color: ${(props) => props.theme.colors.zinc100};
 
       &:not(:disabled):hover {
-        filter: brightness(0.9);
+        background-color: ${(props) => props.theme.colors.emerald700};
       }
     `}
 

@@ -12,7 +12,7 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ asChild = false, variant = "default", size = "default", hover = "default", ...props }, ref) => {
+  ({ asChild = false, type = "button", variant = "default", size = "default", hover = "default", ...props }, ref) => {
     const Comp = asChild ? Slot : ButtonContainer;
 
     return (
@@ -22,6 +22,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         variant={variant}
         size={size}
         hover={hover}
+        type={type}
       />
     );
   }

@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 3.0.16
+
+### Patch Changes
+
+- feat: add default button type
+
 ## 3.0.15
 
 ### Patch Changes
