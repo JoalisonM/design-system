@@ -1,0 +1,3 @@
+import{j as t}from"./jsx-runtime-RAT1XdAw.js";import{useMDXComponents as r}from"./index-DnFI8Glt.js";import{ae as i}from"./index-CwCl1zjr.js";import"./index-DhXULflY.js";import"./_commonjsHelpers-BosuxZz1.js";import"./iframe-DqhBjPVJ.js";import"../sb-preview/runtime.js";import"./index-BBFzS1Xs.js";import"./index-D-8MO0q_.js";import"./index-DF3CPj03.js";import"./index-DrFu-skq.js";function o(e){const n={h1:"h1",p:"p",...r(),...e.components};return t.jsxs(t.Fragment,{children:[t.jsx(i,{title:"Home"}),`
+`,t.jsx(n.h1,{id:"nefex-ui",children:"Nefex Ui"}),`
+`,t.jsx(n.p,{children:"Design System da Nefex"})]})}function l(e={}){const{wrapper:n}={...r(),...e.components};return n?t.jsx(n,{...e,children:t.jsx(o,{...e})}):o(e)}export{l as default};
