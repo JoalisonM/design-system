@@ -16,15 +16,16 @@ export type ScrollAreaProps =
   }
 
 export const ScrollArea = forwardRef<ScrollAreaRef, ScrollAreaProps>((
-  { width, style, children, height = 300, ...props }, ref
+  { width, style, children, type = "scroll", height = 300, ...props }, ref
 ) => {
   return (
     <ScrollAreaRoot
       ref={ref}
+      type={type}
       style={{ height, width, ...style }}
       {...props}
     >
-      <ScrollAreaViewport>
+      <ScrollAreaViewport id="scrollableDiv">
         {children}
       </ScrollAreaViewport>
 

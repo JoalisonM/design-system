@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 3.0.17
+
+### Patch Changes
+
+- add scrollableDiv id on scroll area viewport
+
 ## 3.0.16
 
 ### Patch Changes
