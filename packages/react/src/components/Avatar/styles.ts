@@ -26,8 +26,8 @@ export const AvatarFallback = styled(Avatar.Fallback)`
   display: flex !important;
   align-items: center;
   justify-content: center;
-  background-color: ${(props) => props.theme.colors.zinc600};
-  color: ${(props) => props.theme.colors.zinc800};
+  background-color: ${(props) => props.theme.colors.primary}50;
+  color: ${(props) => props.theme.colors.primary};
 
   svg {
     width: ${(props) => props.theme.space[6]};

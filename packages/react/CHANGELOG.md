@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 3.0.19
+
+### Patch Changes
+
+- feat: change avatar fallback bg and color
+
 ## 3.0.18
 
 ### Patch Changes
