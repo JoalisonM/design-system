@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 3.0.18
+
+### Patch Changes
+
+- feat: add important on avatar css
+
 ## 3.0.17
 
 ### Patch Changes
