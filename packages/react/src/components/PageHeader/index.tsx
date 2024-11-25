@@ -12,7 +12,7 @@ import { Heading } from "../Heading";
 
 export type PageHeaderProps = HTMLAttributes<HTMLDivElement> & {
   title: string;
-  subTitle?: string;
+  subTitle?: ReactNode;
   buttons?: ReactNode;
 }
 
@@ -24,7 +24,7 @@ export const PageHeader = forwardRef<HTMLDivElement, PageHeaderProps>((
       <PageHeaderHeading subTitle={subTitle ? true : false}>
         <div>
           <Heading as="h1" size="md">{title}</Heading>
-          {subTitle && (<Text size="xs">{subTitle}</Text>)}
+          {subTitle && (<Text as="span" size="xs">{subTitle}</Text>)}
         </div>
 
         {buttons && (<PageHeaderButtons>{buttons}</PageHeaderButtons>)}

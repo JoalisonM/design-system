@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 4.0.0
+
+### Major Changes
+
+- feat: change pageHeader subTitle type
+
 ## 3.0.21
 
 ### Patch Changes
