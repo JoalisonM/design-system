@@ -40,8 +40,15 @@ export const Size: StoryObj<AvatarProps> = {
   }
 }
 
-export const WithFallback: StoryObj<AvatarProps> = {
+export const WithAvatarFallback: StoryObj<AvatarProps> = {
   args: {
-    src: undefined
+    src: undefined,
+  }
+}
+
+export const WithWordFallback: StoryObj<AvatarProps> = {
+  args: {
+    src: undefined,
+    fallback: "JM",
   }
 }

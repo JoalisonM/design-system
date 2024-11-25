@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 3.0.20
+
+### Patch Changes
+
+- feat: create avatar word fallback and add jest test library
+
 ## 3.0.19
 
 ### Patch Changes

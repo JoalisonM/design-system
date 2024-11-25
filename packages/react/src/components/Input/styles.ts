@@ -55,7 +55,7 @@ export const Trigger = styled.input`
   }
 
   &::placeholder {
-    color: ${(props) => props.theme.colors.zinc600};
+    color: ${(props) => props.theme.colors.zinc400};
     font-size: ${(props) => props.theme.fontSizes.xs};
   }
 `;

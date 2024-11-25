@@ -1,3 +1,4 @@
+import { shade } from "polished";
 import styled, { css } from "styled-components";
 
 type ButtonContainerProps = {
@@ -37,7 +38,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
       color: ${(props) => props.theme.colors.zinc100};
 
       &:not(:disabled):hover {
-        background-color: ${(props) => props.theme.colors.emerald700};
+        background-color: ${shade(0.2, props.theme.colors.primary)};
       }
     `}
 
