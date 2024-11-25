@@ -20,10 +20,10 @@ export const AvatarImage = styled(Avatar.Image)`
   border-radius: inherit;
 `;
 
-type FallbackContainerProps = {
+type AvatarFallbackProps = {
   size: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 10 | 12 | 16 | 20 | 40 | 64 | 80;
 }
-export const FallbackContainer = styled(Avatar.Fallback) <FallbackContainerProps>`
+export const AvatarFallback = styled(Avatar.Fallback) <AvatarFallbackProps>`
   width: 100%;
   height: 100%;
   display: flex !important;

@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 3.0.21
+
+### Patch Changes
+
+- feat: change avatar types
+
 ## 3.0.20
 
 ### Patch Changes
