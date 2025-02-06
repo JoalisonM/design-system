@@ -41,7 +41,7 @@ export const PageHeaderHeading = styled.div<PageHeaderHeadingProps>`
     `}
   }
 
-  p {
+  span {
     font-weight: 400;
     color: ${(props) => props.theme.colors.zinc500};
   }

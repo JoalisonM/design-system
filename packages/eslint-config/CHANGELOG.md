@@ -1,5 +1,11 @@
 # @nefex-ui/eslint-config
 
+## 3.2.2
+
+### Patch Changes
+
+- add biome
+
 ## 3.2.1
 
 ### Patch Changes

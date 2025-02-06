@@ -14,6 +14,7 @@
     "@nefex-ui/eslint-config": "*",
     "@nefex-ui/react": "*",
     "@nefex-ui/tokens": "*",
+    "lucide-react": "^0.474.0",
     "polished": "^4.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

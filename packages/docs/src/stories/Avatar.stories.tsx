@@ -2,10 +2,11 @@ import { StoryObj, Meta } from '@storybook/react'
 import { Avatar, AvatarProps, Box } from '@nefex-ui/react'
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../config/theme'
+import { User } from 'lucide-react'
 
 export default {
   title: 'Data Display/Avatar',
-  component: Avatar,
+  component: Avatar.Root,
   args: {
     src: 'https://github.com/JoalisonM.png',
     size: 12,
@@ -31,24 +32,55 @@ export default {
   ]
 } as Meta<AvatarProps>
 
-export const Primary: StoryObj<AvatarProps> = {}
+export const Primary: StoryObj<AvatarProps> = {
+  args: {
+    children: (
+      <>
+        <Avatar.Image src='https://github.com/JoalisonM.png' />
+        <Avatar.Fallback>
+          JM
+        </Avatar.Fallback>
+      </>
+    )
+  }
+}
 
 export const Size: StoryObj<AvatarProps> = {
   args: {
-    src: 'https://github.com/JoalisonM.png',
     size: 16,
+    children: (
+      <>
+        <Avatar.Image src='https://github.com/JoalisonM.png' />
+        <Avatar.Fallback>
+          JM
+        </Avatar.Fallback>
+      </>
+    )
   }
 }
 
 export const WithAvatarFallback: StoryObj<AvatarProps> = {
   args: {
-    src: undefined,
+    children: (
+      <>
+        <Avatar.Image src={undefined} />
+        <Avatar.Fallback>
+          <User />
+        </Avatar.Fallback>
+      </>
+    )
   }
 }
 
 export const WithWordFallback: StoryObj<AvatarProps> = {
   args: {
-    src: undefined,
-    fallback: "JM",
+    children: (
+      <>
+        <Avatar.Image src={undefined} />
+        <Avatar.Fallback>
+          JM
+        </Avatar.Fallback>
+      </>
+    )
   }
 }

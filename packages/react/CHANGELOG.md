@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 4.0.1
+
+### Patch Changes
+
+- change avatar
+
 ## 4.0.0
 
 ### Major Changes
