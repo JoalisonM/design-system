@@ -1,14 +1,19 @@
-import { defaultTheme } from "@nefex-ui/react";
-
-const { colors, ...restDefaultTheme } = defaultTheme;
-
-const { primary, secondary, ...restColors } = colors;
+import {
+	colors,
+	fontSizes,
+	fontWeights,
+	fonts,
+	lineHeights,
+	radii,
+	space,
+} from "@nefex-ui/tokens";
 
 export const theme = {
-  colors: {
-    primary: "#059669",
-    secondary: "#022c22",
-    ...restColors,
-  },
-  ...restDefaultTheme,
+	fonts,
+	colors,
+	fontSizes,
+	fontWeights,
+	space,
+	radii,
+	lineHeights,
 };
