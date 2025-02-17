@@ -1,4 +1,7 @@
+import { defaultTheme } from "@nefex-ui/react";
+import { withThemeFromJSXProvider } from "@storybook/addon-themes";
 import type { Preview } from "@storybook/react";
+import { ThemeProvider } from "styled-components";
 
 const preview: Preview = {
   parameters: {
@@ -9,10 +12,19 @@ const preview: Preview = {
       },
     },
     backgrounds: {
-      default: 'dark'
+      default: "dark",
     },
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
+  decorators: [
+    withThemeFromJSXProvider({
+      themes: {
+        light: defaultTheme,
+      },
+      defaultTheme: "light",
+      Provider: ThemeProvider,
+    }),
+  ],
 };
 
 export default preview;

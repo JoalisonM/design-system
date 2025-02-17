@@ -1,10 +1,8 @@
-import { StoryObj, Meta } from '@storybook/react'
-import { Box, ScrollArea, ScrollAreaProps } from '@nefex-ui/react'
-import { ThemeProvider } from 'styled-components'
-import { theme } from '../config/theme'
+import { Box, ScrollArea, type ScrollAreaProps } from "@nefex-ui/react";
+import type { Meta, StoryObj } from "@storybook/react";
 
 export default {
-  title: 'Surfaces/ScrollArea',
+  title: "Surfaces/ScrollArea",
   component: ScrollArea,
   args: {
     children: (
@@ -34,19 +32,13 @@ export default {
         <div>item 10</div>
         <div>item 10</div>
       </div>
-    )
+    ),
   },
   decorators: [
     (Story) => {
-      return (
-        <ThemeProvider theme={theme}>
-          <Box>
-            {Story()}
-          </Box>
-        </ThemeProvider>
-      )
-    }
-  ]
-} as Meta<ScrollAreaProps>
+      return <Box>{Story()}</Box>;
+    },
+  ],
+} as Meta<ScrollAreaProps>;
 
-export const Primary: StoryObj<ScrollAreaProps> = {}
+export const Primary: StoryObj<ScrollAreaProps> = {};

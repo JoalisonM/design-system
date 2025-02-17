@@ -1,22 +1,12 @@
-import { StoryObj, Meta } from '@storybook/react'
-import { Box, BoxProps, defaultTheme } from '@nefex-ui/react'
-import { ThemeProvider } from 'styled-components'
+import { Box, type BoxProps } from "@nefex-ui/react";
+import type { Meta, StoryObj } from "@storybook/react";
 
 export default {
-  title: 'Surfaces/Box',
-  component: Box,
-  args: {
-    children: 'Lorem ipsum dolor sit amet'
-  },
-  decorators: [
-    (Story) => {
-      return (
-        <ThemeProvider theme={defaultTheme}>
-          {Story()}
-        </ThemeProvider>
-      )
-    }
-  ]
-} as Meta<BoxProps>
+	title: "Surfaces/Box",
+	component: Box,
+	args: {
+		children: "Lorem ipsum dolor sit amet",
+	},
+} as Meta<BoxProps>;
 
-export const Primary: StoryObj<BoxProps> = {}
+export const Primary: StoryObj<BoxProps> = {};
