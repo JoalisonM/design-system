@@ -1,6 +1,7 @@
 export * from "./components/Box";
 export * from "./components/Card";
 export * from "./components/Text";
+export * from "./components/Chart";
 export * from "./components/Badge";
 export * from "./components/Input";
 export * from "./components/Drawer";

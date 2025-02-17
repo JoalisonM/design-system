@@ -14,7 +14,7 @@
   "devDependencies": {
     "@changesets/cli": "^2.27.7",
     "esbuild": "^0.23.1",
-    "turbo": "^2.0.14"
+    "turbo": "^2.4.2"
   },
   "packageManager": "npm@10.2.4",
   "dependencies": {

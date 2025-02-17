@@ -1,6 +1,6 @@
 {
   "name": "@nefex-ui/react",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "",
   "exports": {
     ".": {
@@ -69,6 +69,7 @@
     "lucide-react": "^0.428.0",
     "npm": "^10.8.3",
     "polished": "^4.3.1",
+    "recharts": "^2.15.1",
     "styled-components": "^5.3.0"
   },
   "resolutions": {

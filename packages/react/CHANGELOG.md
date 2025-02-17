@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 4.0.2
+
+### Patch Changes
+
+- feat: create chart component
+
 ## 4.0.1
 
 ### Patch Changes
