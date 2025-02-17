@@ -1,7 +1,6 @@
 import { StoryObj, Meta } from '@storybook/react'
-import { Box, BoxProps } from '@nefex-ui/react'
+import { Box, BoxProps, defaultTheme } from '@nefex-ui/react'
 import { ThemeProvider } from 'styled-components'
-import { theme } from '../config/theme'
 
 export default {
   title: 'Surfaces/Box',
@@ -12,7 +11,7 @@ export default {
   decorators: [
     (Story) => {
       return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={defaultTheme}>
           {Story()}
         </ThemeProvider>
       )
