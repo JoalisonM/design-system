@@ -1,4 +1,4 @@
 {
-  "extends": "@nefex-ui/ts-config/react.json",
-  "include": ["src", "./jest.config.js", ],
+	"extends": "@nefex-ui/ts-config/react.json",
+	"include": ["src"]
 }

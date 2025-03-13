@@ -4,7 +4,6 @@ export * from "./components/Text";
 export * from "./components/Chart";
 export * from "./components/Badge";
 export * from "./components/Input";
-export * from "./components/Drawer";
 export * from "./components/Avatar";
 export * from "./components/Select";
 export * from "./components/Button";

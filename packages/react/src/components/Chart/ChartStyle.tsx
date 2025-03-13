@@ -1,5 +1,3 @@
-import React from "react";
-
 import { type ChartConfig, THEMES } from "./Root";
 
 type ChartStyleProps = {

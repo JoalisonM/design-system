@@ -4,14 +4,26 @@
 	"parserOptions": {
 		"project": "./tsconfig.json"
 	},
-	"plugins": ["import", "@typescript-eslint", "no-only-tests"],
+	"plugins": [
+		"import",
+		"@typescript-eslint",
+		"no-only-tests",
+		"prettier",
+		"react-hooks",
+		"react-refresh",
+		"simple-import-sort"
+	],
 	"extends": [
 		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:react-hooks/recommended",
+		"plugin:react-refresh/recommended",
 		"plugin:@typescript-eslint/eslint-recommended",
 		"plugin:@typescript-eslint/recommended",
 		"plugin:import/errors",
 		"plugin:import/warnings",
-		"plugin:import/typescript"
+		"plugin:import/typescript",
+		"prettier"
 	],
 	"settings": {
 		"import/resolver": {
@@ -24,8 +36,16 @@
 	"env": {
 		"node": true
 	},
-	"ignorePatterns": ["*.js", "dist", "node_modules", "examples", "scripts", "*.d.ts"],
+	"ignorePatterns": [
+		"*.js",
+		"dist",
+		"node_modules",
+		"examples",
+		"scripts",
+		"*.d.ts"
+	],
 	"rules": {
+		"simple-import-sort/imports": "error",
 		"semi": "error",
 		"eqeqeq": "error",
 		"no-console": "warn",
@@ -47,7 +67,10 @@
 		"object-curly-spacing": ["error", "always"],
 		"comma-dangle": ["error", "always-multiline"],
 		"keyword-spacing": ["error", { "before": true, "after": true }],
-		"space-before-function-paren": ["error", { "anonymous": "ignore", "named": "ignore", "asyncArrow": "always" }],
+		"space-before-function-paren": [
+			"error",
+			{ "anonymous": "ignore", "named": "ignore", "asyncArrow": "always" }
+		],
 
 		"@typescript-eslint/no-shadow": "off",
 		"@typescript-eslint/no-empty-function": "off",
@@ -58,35 +81,36 @@
 		"@typescript-eslint/no-explicit-any": "warn",
 		"@typescript-eslint/explicit-module-boundary-types": "off",
 		"@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
-		"@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+		"@typescript-eslint/no-unused-vars": [
+			"warn",
+			{ "argsIgnorePattern": "^_" }
+		],
 
 		"import/no-duplicates": ["error", { "considerQueryString": true }],
 		// ESLint Importer Rules
 		"import/order": [
 			"error",
 			{
-				"groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object"],
+				"groups": [
+					"builtin",
+					"external",
+					"internal",
+					"parent",
+					"sibling",
+					"index",
+					"object"
+				],
 				"pathGroups": [
-					{
-						"pattern": "./**",
-						"group": "internal"
-					},
-					{
-						"pattern": "../**",
-						"group": "parent"
-					},
-					{
-						"pattern": "core/**",
-						"group": "sibling"
-					},
-					{
-						"pattern": "admin/**",
-						"group": "sibling"
-					},
-					{
-						"pattern": "sharedLibrary/**",
-						"group": "sibling"
-					}
+					{ "pattern": "./**", "group": "internal" },
+					{ "pattern": "../**", "group": "parent" },
+					{ "pattern": "core/**", "group": "sibling" },
+					{ "pattern": "host/**", "group": "sibling" },
+					{ "pattern": "admin/**", "group": "sibling" },
+					{ "pattern": "chat/**", "group": "sibling" },
+					{ "pattern": "storage/**", "group": "sibling" },
+					{ "pattern": "monitoring/**", "group": "sibling" },
+					{ "pattern": "analytics/**", "group": "sibling" },
+					{ "pattern": "sharedLibrary/**", "group": "sibling" }
 				],
 				"pathGroupsExcludedImportTypes": ["builtin"],
 				"newlines-between": "always"

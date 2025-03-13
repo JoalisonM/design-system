@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 4.0.3
+
+### Patch Changes
+
+- feat: update to react 19
+
 ## 4.0.2
 
 ### Patch Changes

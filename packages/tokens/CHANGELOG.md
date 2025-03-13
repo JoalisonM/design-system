@@ -1,5 +1,11 @@
 # @nefex-ui/tokens
 
+## 1.2.5
+
+### Patch Changes
+
+- feat: new configs
+
 ## 1.2.4
 
 ### Patch Changes

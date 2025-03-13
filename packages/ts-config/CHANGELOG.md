@@ -1,5 +1,11 @@
 # @nefex-ui/ts-config
 
+## 2.3.3
+
+### Patch Changes
+
+- feat: change ts config to react 19 and node 22
+
 ## 2.3.2
 
 ### Patch Changes

@@ -15,7 +15,7 @@ const preview: Preview = {
       default: "dark",
     },
   },
-  tags: ["autodocs"],
+  tags: ["autodocs", "autodocs"],
   decorators: [
     withThemeFromJSXProvider({
       themes: {

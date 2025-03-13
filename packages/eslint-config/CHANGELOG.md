@@ -1,5 +1,11 @@
 # @nefex-ui/eslint-config
 
+## 3.2.3
+
+### Patch Changes
+
+- feat: add prettier
+
 ## 3.2.2
 
 ### Patch Changes

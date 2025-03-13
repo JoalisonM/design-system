@@ -1,9 +1,3 @@
 {
-  "extends": "./base.json",
-  "compilerOptions": {
-    "jsx": "react",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
-    "target": "es5"
-  }
+	"extends": "./base.json"
 }

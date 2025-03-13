@@ -1,4 +1,5 @@
-import React from "react";
+import { forwardRef, useMemo } from "react";
+import type { ComponentProps, HTMLAttributes } from "react";
 import type * as RechartsPrimitive from "recharts";
 
 import { useChart } from "./Root";
@@ -18,10 +19,10 @@ export type ChartTooltipContentProps = {
 	indicator?: "line" | "dot" | "dashed";
 	nameKey?: string;
 	labelKey?: string;
-} & React.ComponentProps<typeof RechartsPrimitive.Tooltip> &
-	React.HTMLAttributes<HTMLDivElement>;
+} & ComponentProps<typeof RechartsPrimitive.Tooltip> &
+	HTMLAttributes<HTMLDivElement>;
 
-export const ChartTooltipContent = React.forwardRef<
+export const ChartTooltipContent = forwardRef<
 	HTMLDivElement,
 	ChartTooltipContentProps
 >(
@@ -44,7 +45,7 @@ export const ChartTooltipContent = React.forwardRef<
 	) => {
 		const { config } = useChart();
 
-		const tooltipLabel = React.useMemo(() => {
+		const tooltipLabel = useMemo(() => {
 			if (hideLabel || !payload?.length) {
 				return null;
 			}
