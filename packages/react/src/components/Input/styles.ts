@@ -2,9 +2,11 @@ import styled from "styled-components";
 
 export const InputContainer = styled.div`
   display: flex;
-  align-items: baseline;
+  align-items: center;
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  box-sizing: border-box;
 
+  height: 42px;
   border-radius: ${(props) => props.theme.radii.xs};
   background-color: ${(props) => props.theme.colors.white};
   border: 1px solid ${(props) => props.theme.colors.zinc200};
@@ -43,6 +45,7 @@ export const Trigger = styled.input`
   font-weight: ${(props) => props.theme.fontWeights.regular};
   background: transparent;
   border: 0;
+  padding: 0;
   width: 100%;
 
   &:focus {

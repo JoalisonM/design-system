@@ -1,5 +1,11 @@
 # @nefex-ui/react
 
+## 4.0.4
+
+### Patch Changes
+
+- add height to input
+
 ## 4.0.3
 
 ### Patch Changes
